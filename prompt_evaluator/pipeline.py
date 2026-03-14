@@ -195,8 +195,8 @@ class SceneSpec:
     reference_image_url: str = ""  # Skip image gen, use this directly
 
 
-# Default hotel scenes for evaluation
-DEFAULT_HOTEL_SCENES: List[SceneSpec] = [
+# Default scenes — configurable per domain, not hardcoded to hotel
+DEFAULT_SCENES: List[SceneSpec] = [
     SceneSpec(
         description="Luxury hotel swimming pool at golden hour with crystal clear water",
         scene_type="pool",
@@ -218,6 +218,9 @@ DEFAULT_HOTEL_SCENES: List[SceneSpec] = [
         image_prompt="A serene hotel spa treatment room, warm candlelight, stone walls, fluffy white towels, bamboo accents, calming atmosphere, professional hotel photography",
     ),
 ]
+
+# Backward compat alias
+DEFAULT_HOTEL_SCENES = DEFAULT_SCENES
 
 
 # ---------------------------------------------------------------------------
@@ -405,14 +408,14 @@ class EvalPipeline:
         """Evaluate multiple scenes.
 
         Args:
-            scenes: Scene specifications. Uses DEFAULT_HOTEL_SCENES if None.
+            scenes: Scene specifications. Uses DEFAULT_SCENES if None.
             save: Save results to output_dir as JSON.
 
         Returns:
             ``BatchResult`` with all individual results.
         """
         if scenes is None:
-            scenes = DEFAULT_HOTEL_SCENES
+            scenes = DEFAULT_SCENES
 
         batch = BatchResult(
             system_prompt=self.system_prompt,
@@ -622,7 +625,7 @@ class EvalPipeline:
             List of BatchResult, one per round.
         """
         if scenes is None:
-            scenes = DEFAULT_HOTEL_SCENES
+            scenes = DEFAULT_SCENES
 
         all_rounds: List[BatchResult] = []
 

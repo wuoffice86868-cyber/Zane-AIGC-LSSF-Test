@@ -2,26 +2,23 @@
 
 ---
 
-## 🔴 Zane Status (live)
+## 🟢 Status (live)
 
-**Last updated**: 2026-03-14 07:15 UTC
+**Last updated**: 2026-03-14 10:35 UTC  
+**Version**: 0.2.0  
+**Tests**: 146 passing
 
-**Currently doing**: Updating README as status dashboard per Leo's request. Need repo URL + PAT to push (lost in session reset).
-
-**Blocked on**: Git push access — need Leo to re-send GitHub repo URL + PAT (DM, not channel).
-
-**Last completed**:
-- DSPy optimizer wired into full pipeline, 142 tests passing
-- v3 comparison run: 12 videos, v1 avg 75.3 → v3 avg 84.8 (+9.5), pass rate 2/6 → 4/6
-- TikTok research docs (dedup analysis + creator monetization) v2, Chinese PDFs delivered
-- Repo structure cleaned up (scripts/, docs/, eval_results/ properly organized)
+**Phase 1 Foundation — DONE** ✓
+- OPRO optimizer removed, 3-dim reward model (Foundational/Motion/Aesthetic) aligned with Seedance RM architecture
+- Auto-fail routing: each failure type penalizes only its relevant dimension
+- Pipeline DSPy-only (no OPRO fallback)
+- VideoScore2 HF Space tested — currently unstable (ZeroGPU), on hold
 
 **Next up**:
-1. Push latest code to GitHub (once access restored)
-2. Run full v3 vs v1 comparison with 1080p + Gemini 2.5 Pro QC (need more data points)
-3. DSPy optimization loop: first real test — 3 rounds, target reward 85
-4. VideoScore2 HF Space feasibility test
-5. Gemini QC consistency validation (same video 3×, take median)
+1. Pipeline config-driven refactor (remove domain-specific hardcoding)
+2. Run v3 comparison test with new 3-dim reward model
+3. DSPy optimization loop: test critique → improve → repeat cycle
+4. Gemini QC consistency validation (same video 3×, take median)
 
 **API spend to date**: Kie.ai ~$20.31 | Gemini ~$0 (free tier)
 
@@ -34,10 +31,9 @@ prompt_evaluator/              ← repo root
 │
 ├── prompt_evaluator/          ← CORE MODULE (pip installable Python package)
 │   ├── models.py              │  All Pydantic data types (EvalSample, QCResult, RewardBreakdown, etc.)
-│   ├── reward_calculator.py   │  Multi-dimension reward scoring (QC + aesthetic + motion + adherence)
+│   ├── reward_calculator.py   │  3-dim reward scoring (Foundational/Motion/Aesthetic)
 │   ├── prompt_analyzer.py     │  Prompt feature extraction + correlation with scores
-│   ├── optimizer.py           │  OPRO meta-prompt optimizer (legacy fallback)
-│   ├── dspy_optimizer.py      │  DSPy optimizer — critique + template improvement (primary)
+│   ├── dspy_optimizer.py      │  DSPy optimizer — critique + template improvement
 │   ├── calibration.py         │  QC vs human label accuracy metrics (precision/recall/F1)
 │   ├── pipeline.py            │  EvalPipeline orchestrator — wires everything together
 │   ├── kie_client.py          │  Kie.ai API wrapper (Seedream 4.5 image + Seedance 1.5 Pro video)
