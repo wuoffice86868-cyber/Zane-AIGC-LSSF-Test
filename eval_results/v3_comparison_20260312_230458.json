@@ -1,0 +1,49 @@
+{
+  "test": "v3_vs_v1_comparison",
+  "timestamp": "2026-03-12T23:04:58.818518+00:00",
+  "elapsed_sec": 226.8162362575531,
+  "summary": {
+    "v1_avg_reward": 70.0,
+    "v3_avg_reward": 0,
+    "delta": null,
+    "v1_count": 1,
+    "v3_count": 0
+  },
+  "results": [
+    {
+      "scene": "pool",
+      "version": "v1",
+      "prompt": "Single continuous shot. Wide shot of the infinity pool at golden hour. The camera pushes slowly forward along the pool edge. Water ripples softly in warm light. Sky and clouds remain completely still.",
+      "word_count": 33,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1492c46-d814-4b67-8445-484ea0e35860_0.jpg",
+      "video_url": "https://tempfile.aiquickdraw.com/r/711f42ed956268e09fb642840ecfa612_1773356670_ziznhz62.mp4",
+      "qc": {
+        "pass": true,
+        "confidence": 0.0,
+        "human_present": false,
+        "auto_fail_triggered": [],
+        "minor_issues": [],
+        "summary": "QC error (safe pass): HTTPSConnectionPool(host='tempfile.aiquickdraw.com', port=443): Max retries exceeded with url: /r/71",
+        "aesthetic_score": 5,
+        "motion_score": 5,
+        "prompt_adherence_score": 5,
+        "scroll_stop_score": 5,
+        "scene_type_detected": "other"
+      },
+      "reward": 70.0,
+      "error": "",
+      "video_cost_ms": 104
+    },
+    {
+      "scene": "pool",
+      "version": "v3",
+      "prompt": "Luxury infinity pool merges with golden ocean horizon, palm fronds casting warm shadows on turquoise water, light ripples dancing across the surface. Camera slowly pushes forward along the pool edge.",
+      "word_count": 30,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1492c46-d814-4b67-8445-484ea0e35860_0.jpg",
+      "video_url": "",
+      "qc": {},
+      "reward": 0.0,
+      "error": "Video error: Connection error: [Errno 111] Connection refused"
+    }
+  ]
+}

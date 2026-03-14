@@ -1,0 +1,428 @@
+2026-03-11 09:37:50,783 [INFO] ======================================================================
+2026-03-11 09:37:50,783 [INFO] FULL PIPELINE RUN — 2026-03-11T09:37:50.783580+00:00
+2026-03-11 09:37:50,783 [INFO] ======================================================================
+/data/workspace/prompt_evaluator/prompt_evaluator/gemini_client.py:172: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+2026-03-11 09:37:51,101 [INFO] 
+==================================================
+2026-03-11 09:37:51,101 [INFO] SYSTEM PROMPT: v1
+2026-03-11 09:37:51,101 [INFO] ==================================================
+2026-03-11 09:37:51,101 [INFO] 
+--- v1_pool_1773221871 | Luxury infinity pool overlooking ocean at sunset ---
+2026-03-11 09:37:51,101 [INFO] Generating cinematography prompt...
+2026-03-11 09:37:52,476 [INFO] Prompt: Single continuous shot gently pushes
+2026-03-11 09:37:52,476 [INFO] Generating image...
+2026-03-11 09:37:52,925 [INFO] Created task 34c2271b438d45613bc5c3c49f5a9053 (model=seedream/4.5-text-to-image)
+2026-03-11 09:39:28,463 [INFO] Image: https://tempfile.aiquickdraw.com/f/a1460a06-746e-4475-859e-910c3b300c22_0.jpg
+2026-03-11 09:39:28,463 [INFO] Generating video...
+2026-03-11 09:39:28,808 [INFO] Created task eed78a499441a30d5573e5cd176c076c (model=seedance-1.5-pro)
+2026-03-11 09:42:04,297 [INFO] Video: https://tempfile.aiquickdraw.com/r/eed78a499441a30d5573e5cd176c076c_1773222093_y
+2026-03-11 09:42:04,297 [INFO] Running Gemini QC...
+2026-03-11 09:42:04,297 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/eed78a499441a30d5573e5cd176c076c_1773222093_y
+2026-03-11 09:42:05,025 [INFO] Uploading video to Gemini File API...
+2026-03-11 09:42:08,960 [INFO] Running Gemini QC evaluation...
+2026-03-11 09:42:19,257 [INFO] QC: pass=True, aesthetic=9, motion=9, scroll_stop=9, confidence=1.00
+2026-03-11 09:42:19,258 [INFO]   Minor: ['slight_flicker', 'texture_shimmer']
+2026-03-11 09:42:19,258 [INFO]   Summary: This clip features stunning golden hour aesthetics and smooth camera motion, effectively conveying a luxurious tropical vibe, though minor texture shimmer and slight flicker are present.
+2026-03-11 09:42:19,258 [INFO] Reward: 94.0/100
+2026-03-11 09:42:21,258 [INFO] 
+--- v1_pool_1773222141 | Indoor heated pool with glass ceiling ---
+2026-03-11 09:42:21,258 [INFO] Generating cinematography prompt...
+2026-03-11 09:42:22,839 [INFO] Prompt: Single continuous shot, camera gently pushes
+2026-03-11 09:42:22,839 [INFO] Generating image...
+2026-03-11 09:42:23,509 [INFO] Created task c45201b2defeac52fe2dd7745cbabfd3 (model=seedream/4.5-text-to-image)
+2026-03-11 09:42:49,807 [INFO] Image: https://tempfile.aiquickdraw.com/f/a1460ba2-2866-45a6-9b7f-c32f1903cc41_0.jpg
+2026-03-11 09:42:49,807 [INFO] Generating video...
+2026-03-11 09:42:50,334 [INFO] Created task 1f61e6e7eaf4742e1908649f95ce1529 (model=seedance-1.5-pro)
+2026-03-11 09:45:26,308 [INFO] Video: https://tempfile.aiquickdraw.com/r/1f61e6e7eaf4742e1908649f95ce1529_1773222305_f
+2026-03-11 09:45:26,308 [INFO] Running Gemini QC...
+2026-03-11 09:45:26,308 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/1f61e6e7eaf4742e1908649f95ce1529_1773222305_f
+2026-03-11 09:45:27,002 [INFO] Uploading video to Gemini File API...
+2026-03-11 09:45:32,741 [INFO] Running Gemini QC evaluation...
+2026-03-11 09:45:41,207 [INFO] QC: pass=True, aesthetic=9, motion=8, scroll_stop=9, confidence=1.00
+2026-03-11 09:45:41,208 [INFO]   Summary: This clip excels in creating a luxurious and serene indoor pool atmosphere with strong aesthetic appeal and lighting, despite the steam motion being slightly repetitive in its generation.
+2026-03-11 09:45:41,208 [INFO] Reward: 92.0/100
+2026-03-11 09:45:43,208 [INFO] 
+--- v1_room_1773222343 | Suite with panoramic city view at night ---
+2026-03-11 09:45:43,208 [INFO] Generating cinematography prompt...
+2026-03-11 09:45:44,519 [INFO] Prompt: Single continuous shot, the camera gently
+2026-03-11 09:45:44,519 [INFO] Generating image...
+2026-03-11 09:45:44,719 [INFO] Created task 6c3ac639b2cb377e6c2c856c07eb3f26 (model=seedream/4.5-text-to-image)
+2026-03-11 09:46:11,138 [INFO] Image: https://tempfile.aiquickdraw.com/f/a1460cd3-8597-47f4-aaf7-44bea8af2908_0.jpg
+2026-03-11 09:46:11,138 [INFO] Generating video...
+2026-03-11 09:46:11,476 [INFO] Created task 1998f679e8e3de24179899fc45a42534 (model=seedance-1.5-pro)
+2026-03-11 09:48:17,322 [INFO] Video: https://tempfile.aiquickdraw.com/r/1998f679e8e3de24179899fc45a42534_1773222479_n
+2026-03-11 09:48:17,322 [INFO] Running Gemini QC...
+2026-03-11 09:48:17,322 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/1998f679e8e3de24179899fc45a42534_1773222479_n
+2026-03-11 09:48:19,285 [INFO] Uploading video to Gemini File API...
+2026-03-11 09:48:25,040 [INFO] Running Gemini QC evaluation...
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1773222505.459484   16304 http_connect_handshaker.cc:114] HTTP proxy handshake with [unknown] failed: UNKNOWN: FD Shutdown [type.googleapis.com/grpc.status.children='\x15\x00\x00\x00\x08\x0e\x12\x11\x65ndpoint shutdown']
+2026-03-11 09:48:35,524 [INFO] QC: pass=False, aesthetic=7, motion=5, scroll_stop=8, confidence=0.95
+2026-03-11 09:48:35,524 [INFO]   Auto-fail: ['object_morphing']
+2026-03-11 09:48:35,524 [INFO]   Minor: ['slight_flicker', 'texture_shimmer', 'reflection_error']
+2026-03-11 09:48:35,524 [INFO]   Summary: The video presents a luxurious hotel room with a stunning city view, achieving a high aesthetic and scroll-stopping initial impression, but it auto-fails due to noticeable object morphing in the chandelier, headboard, and flowers, which detracts significantly from motion quality.
+2026-03-11 09:48:35,524 [INFO] Reward: 55.2/100
+2026-03-11 09:48:37,524 [INFO] 
+--- v1_room_1773222517 | Tropical villa bedroom with garden view ---
+2026-03-11 09:48:37,524 [INFO] Generating cinematography prompt...
+2026-03-11 09:48:38,937 [INFO] Prompt: Single continuous shot, camera gently
+2026-03-11 09:48:38,937 [INFO] Generating image...
+2026-03-11 09:48:39,398 [INFO] Created task 1bd990d26c01b60c1eb6cd4c59efe454 (model=seedream/4.5-text-to-image)
+2026-03-11 09:50:14,499 [INFO] Image: https://tempfile.aiquickdraw.com/f/a1460de7-a703-4011-9ee0-18a665e5e35a_0.jpg
+2026-03-11 09:50:14,500 [INFO] Generating video...
+2026-03-11 09:50:14,989 [INFO] Created task 252eb62692b43495e59c0399e1d55717 (model=seedance-1.5-pro)
+2026-03-11 09:54:53,006 [INFO] Video: https://tempfile.aiquickdraw.com/r/252eb62692b43495e59c0399e1d55717_1773222874_i
+2026-03-11 09:54:53,006 [INFO] Running Gemini QC...
+2026-03-11 09:54:53,006 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/252eb62692b43495e59c0399e1d55717_1773222874_i
+2026-03-11 09:54:53,784 [INFO] Uploading video to Gemini File API...
+2026-03-11 09:54:57,966 [INFO] Running Gemini QC evaluation...
+2026-03-11 09:55:08,561 [INFO] QC: pass=True, aesthetic=9, motion=9, scroll_stop=9, confidence=1.00
+2026-03-11 09:55:08,562 [INFO]   Minor: ['texture_shimmer']
+2026-03-11 09:55:08,562 [INFO]   Summary: This clip features excellent aesthetic quality with warm golden hour lighting and smooth camera motion, effectively conveying a luxurious and serene tropical bedroom, despite very minor texture shimmering.
+2026-03-11 09:55:08,562 [INFO] Reward: 94.0/100
+2026-03-11 09:55:10,562 [INFO] 
+--- v1_lobby_1773222910 | Modern minimalist hotel lobby ---
+2026-03-11 09:55:10,562 [INFO] Generating cinematography prompt...
+2026-03-11 09:55:11,941 [INFO] Prompt: Single continuous shot: Camera gradually
+2026-03-11 09:55:11,941 [INFO] Generating image...
+2026-03-11 09:55:12,144 [INFO] Created task 7a62ffef8c9846a02c4f2ca55176edd0 (model=seedream/4.5-text-to-image)
+2026-03-11 09:55:38,772 [INFO] Image: https://tempfile.aiquickdraw.com/f/a1461036-da37-44d5-9e69-dd2fec9cd2b7_0.jpg
+2026-03-11 09:55:38,772 [INFO] Generating video...
+2026-03-11 09:55:39,098 [INFO] Created task 480f2a8683badf8cb2555082edfd41fa (model=seedance-1.5-pro)
+2026-03-11 09:57:44,590 [INFO] Video: https://tempfile.aiquickdraw.com/r/480f2a8683badf8cb2555082edfd41fa_1773223036_8
+2026-03-11 09:57:44,590 [INFO] Running Gemini QC...
+2026-03-11 09:57:44,590 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/480f2a8683badf8cb2555082edfd41fa_1773223036_8
+2026-03-11 09:57:45,285 [INFO] Uploading video to Gemini File API...
+E0000 00:00:1773223067.076438   16302 http_connect_handshaker.cc:114] HTTP proxy handshake with [unknown] failed: UNKNOWN: FD Shutdown [type.googleapis.com/grpc.status.children='\x15\x00\x00\x00\x08\x0e\x12\x11\x65ndpoint shutdown']
+2026-03-11 09:57:49,464 [INFO] Running Gemini QC evaluation...
+2026-03-11 09:58:00,833 [INFO] QC: pass=False, aesthetic=7, motion=5, scroll_stop=8, confidence=1.00
+2026-03-11 09:58:00,834 [INFO]   Auto-fail: ['object_morphing', 'structural_collapse']
+2026-03-11 09:58:00,834 [INFO]   Minor: ['slight_flicker', 'color_drift', 'speed_inconsistency', 'texture_shimmer']
+2026-03-11 09:58:00,834 [INFO]   Summary: The video showcases a beautifully composed and lit modern hotel lobby, but it fails due to subtle yet pervasive object morphing in the flowers and painting, and structural breathing in the concrete wall and wooden elements.
+2026-03-11 09:58:00,834 [INFO] Reward: 42.0/100
+2026-03-11 09:58:02,834 [INFO] 
+--- v1_spa_1773223082 | Outdoor spa with mountain view ---
+2026-03-11 09:58:02,834 [INFO] Generating cinematography prompt...
+2026-03-11 09:58:04,317 [INFO] Prompt: Single continuous shot, camera gently pushes
+2026-03-11 09:58:04,317 [INFO] Generating image...
+2026-03-11 09:58:04,646 [INFO] Created task 4edf37de26e4deb1ca6bd132fbd975e4 (model=seedream/4.5-text-to-image)
+2026-03-11 10:01:10,992 [INFO] Image: https://tempfile.aiquickdraw.com/f/a1461155-af4a-45e5-bf7a-e1d51ba93a3d_0.jpg
+2026-03-11 10:01:10,992 [INFO] Generating video...
+2026-03-11 10:01:11,197 [INFO] Created task 34e976289340a7cee3627e5d98c0a4e7 (model=seedance-1.5-pro)
+2026-03-11 10:03:46,706 [INFO] Video: https://tempfile.aiquickdraw.com/r/34e976289340a7cee3627e5d98c0a4e7_1773223417_0
+2026-03-11 10:03:46,706 [INFO] Running Gemini QC...
+2026-03-11 10:03:46,706 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/34e976289340a7cee3627e5d98c0a4e7_1773223417_0
+2026-03-11 10:03:47,304 [INFO] Uploading video to Gemini File API...
+2026-03-11 10:03:53,181 [INFO] Running Gemini QC evaluation...
+2026-03-11 10:04:04,128 [INFO] QC: pass=False, aesthetic=7, motion=4, scroll_stop=8, confidence=1.00
+2026-03-11 10:04:04,129 [INFO]   Auto-fail: ['action_loop']
+2026-03-11 10:04:04,129 [INFO]   Summary: The video features a stunning and inviting outdoor hot tub scene with excellent composition and lighting, but it auto-fails due to obvious temporal looping in the hot tub's water ripples and steam.
+2026-03-11 10:04:04,129 [INFO] Reward: 74.8/100
+2026-03-11 10:04:06,129 [INFO] 
+--- v1_restaurant_1773223446 | Rooftop restaurant at twilight ---
+2026-03-11 10:04:06,129 [INFO] Generating cinematography prompt...
+2026-03-11 10:04:07,451 [INFO] Prompt: Single continuous shot: Camera gently pushes forward
+2026-03-11 10:04:07,451 [INFO] Generating image...
+2026-03-11 10:04:08,093 [INFO] Created task c3bb98acc31745db8d102710beae8a80 (model=seedream/4.5-text-to-image)
+2026-03-11 10:04:34,220 [INFO] Image: https://tempfile.aiquickdraw.com/f/a1461364-7e1d-4360-8ce6-5d1545a571c6_0.jpg
+2026-03-11 10:04:34,220 [INFO] Generating video...
+2026-03-11 10:04:34,708 [INFO] Created task a354fb6a676655a23a5f9c4fd352f0a2 (model=seedance-1.5-pro)
+2026-03-11 10:06:40,652 [INFO] Video: https://tempfile.aiquickdraw.com/r/a354fb6a676655a23a5f9c4fd352f0a2_1773223594_j
+2026-03-11 10:06:40,652 [INFO] Running Gemini QC...
+2026-03-11 10:06:40,652 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/a354fb6a676655a23a5f9c4fd352f0a2_1773223594_j
+2026-03-11 10:06:41,414 [INFO] Uploading video to Gemini File API...
+2026-03-11 10:06:45,235 [INFO] Running Gemini QC evaluation...
+2026-03-11 10:06:57,374 [INFO] QC: pass=False, aesthetic=8, motion=4, scroll_stop=5, confidence=0.90
+2026-03-11 10:06:57,375 [INFO]   Summary: 
+2026-03-11 10:06:57,375 [INFO] Reward: 82.0/100
+2026-03-11 10:06:59,375 [INFO] 
+--- v1_exterior_1773223619 | Hotel facade with fountain at entrance ---
+2026-03-11 10:06:59,375 [INFO] Generating cinematography prompt...
+2026-03-11 10:07:00,794 [INFO] Prompt: Single continuous shot, the
+2026-03-11 10:07:00,794 [INFO] Generating image...
+2026-03-11 10:07:01,333 [INFO] Created task 33fc908e157f48f7c02d679de5467205 (model=seedream/4.5-text-to-image)
+2026-03-11 10:07:27,838 [INFO] Image: https://tempfile.aiquickdraw.com/f/a1461473-381e-4873-8c53-984c51deab5a_0.jpg
+2026-03-11 10:07:27,838 [INFO] Generating video...
+2026-03-11 10:07:28,151 [INFO] Created task a792a90766c961285f7a5c617bf228c3 (model=seedance-1.5-pro)
+2026-03-11 10:09:33,540 [INFO] Video: https://tempfile.aiquickdraw.com/r/a792a90766c961285f7a5c617bf228c3_1773223762_c
+2026-03-11 10:09:33,540 [INFO] Running Gemini QC...
+2026-03-11 10:09:33,540 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/a792a90766c961285f7a5c617bf228c3_1773223762_c
+2026-03-11 10:09:34,590 [INFO] Uploading video to Gemini File API...
+2026-03-11 10:09:38,396 [INFO] Running Gemini QC evaluation...
+2026-03-11 10:09:50,402 [INFO] QC: pass=False, aesthetic=8, motion=5, scroll_stop=5, confidence=0.90
+2026-03-11 10:09:50,402 [INFO]   Auto-fail: ['object_morphing', 'action_loop']
+2026-03-11 10:09:50,402 [INFO]   Summary: 
+2026-03-11 10:09:50,403 [INFO] Reward: 67.6/100
+2026-03-11 10:09:52,403 [INFO] 
+--- v1_beach_1773223792 | Private beach cabana setup ---
+2026-03-11 10:09:52,403 [INFO] Generating cinematography prompt...
+2026-03-11 10:09:55,224 [INFO] Prompt: Single continuous shot: Camera gently pushes forward
+2026-03-11 10:09:55,224 [INFO] Generating image...
+2026-03-11 10:09:55,562 [INFO] Created task 9a8a9e989dad69870e6d90877357712c (model=seedream/4.5-text-to-image)
+2026-03-11 10:15:03,421 [INFO] Image: https://tempfile.aiquickdraw.com/f/a146157f-7546-4f52-b383-3f7013f127cc_0.jpg
+2026-03-11 10:15:03,421 [INFO] Generating video...
+2026-03-11 10:15:03,634 [INFO] Created task 20216573ebaa3e685bc6cd3af193aef8 (model=seedance-1.5-pro)
+2026-03-11 10:17:09,967 [INFO] Video: https://tempfile.aiquickdraw.com/r/20216573ebaa3e685bc6cd3af193aef8_1773224207_l
+2026-03-11 10:17:09,967 [INFO] Running Gemini QC...
+2026-03-11 10:17:09,967 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/20216573ebaa3e685bc6cd3af193aef8_1773224207_l
+2026-03-11 10:17:10,796 [INFO] Uploading video to Gemini File API...
+2026-03-11 10:17:16,620 [INFO] Running Gemini QC evaluation...
+2026-03-11 10:17:25,771 [INFO] QC: pass=False, aesthetic=7, motion=4, scroll_stop=8, confidence=1.00
+2026-03-11 10:17:25,771 [INFO]   Auto-fail: ['action_loop', 'sky_anomaly']
+2026-03-11 10:17:25,771 [INFO]   Minor: ['texture_shimmer', 'speed_inconsistency']
+2026-03-11 10:17:25,771 [INFO]   Summary: The clip features a stunning tropical beach sunset with a luxury cabana, but suffers from noticeable looping waves and unnaturally fast, smearing clouds, significantly detracting from its professional polish.
+2026-03-11 10:17:25,771 [INFO] Reward: 49.2/100
+2026-03-11 10:17:27,771 [INFO] 
+--- v1_bathroom_1773224247 | Marble bathroom with freestanding tub ---
+2026-03-11 10:17:27,772 [INFO] Generating cinematography prompt...
+2026-03-11 10:17:29,007 [INFO] Prompt: Single continuous shot, camera gently pushes
+2026-03-11 10:17:29,007 [INFO] Generating image...
+2026-03-11 10:17:29,563 [INFO] Created task 7f0104eeea3dda7d585485f55ffb24e8 (model=seedream/4.5-text-to-image)
+2026-03-11 10:18:10,675 [INFO] Image: https://tempfile.aiquickdraw.com/f/a146183b-a93d-433d-b032-1e3472256a95_0.jpg
+2026-03-11 10:18:10,675 [INFO] Generating video...
+2026-03-11 10:18:11,321 [INFO] Created task 23b0530d09c539e5b1c7cd3dc4c47f17 (model=seedance-1.5-pro)
+2026-03-11 10:19:46,074 [INFO] Video: https://tempfile.aiquickdraw.com/r/23b0530d09c539e5b1c7cd3dc4c47f17_1773224366_h
+2026-03-11 10:19:46,075 [INFO] Running Gemini QC...
+2026-03-11 10:19:46,075 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/23b0530d09c539e5b1c7cd3dc4c47f17_1773224366_h
+2026-03-11 10:19:47,424 [INFO] Uploading video to Gemini File API...
+2026-03-11 10:19:51,332 [INFO] Running Gemini QC evaluation...
+2026-03-11 10:20:02,547 [INFO] QC: pass=False, aesthetic=6, motion=4, scroll_stop=8, confidence=1.00
+2026-03-11 10:20:02,547 [INFO]   Auto-fail: ['object_morphing', 'structural_collapse']
+2026-03-11 10:20:02,547 [INFO]   Minor: ['texture_shimmer']
+2026-03-11 10:20:02,547 [INFO]   Summary: The clip features a beautifully composed and lit luxury bathroom, but it fails due to persistent object morphing in the plant and bathtub, and structural collapse with the subtly shifting marble tiles and window frame, significantly detracting from its professional polish and motion quality.
+2026-03-11 10:20:02,547 [INFO] Reward: 56.4/100
+2026-03-11 10:20:04,548 [INFO] 
+==================================================
+2026-03-11 10:20:04,548 [INFO] SYSTEM PROMPT: v2_diverse
+2026-03-11 10:20:04,548 [INFO] ==================================================
+2026-03-11 10:20:04,548 [INFO] 
+--- v2_diverse_pool_1773224404 | Luxury infinity pool overlooking ocean at sunset ---
+2026-03-11 10:20:04,548 [INFO] Generating cinematography prompt...
+2026-03-11 10:20:05,850 [INFO] Prompt: Single continuous shot. Camera gently pulls
+2026-03-11 10:20:05,850 [INFO] Generating image...
+2026-03-11 10:20:06,069 [INFO] Created task bfbd5e487ad7ab58553b4cfc91dc26eb (model=seedream/4.5-text-to-image)
+2026-03-11 10:20:31,888 [INFO] Image: https://tempfile.aiquickdraw.com/f/a146191a-50eb-4a4b-a43a-67023ac8cbec_0.jpg
+2026-03-11 10:20:31,888 [INFO] Generating video...
+2026-03-11 10:20:32,338 [INFO] Created task a9b652bbdb31e8c50fe1955b3f081ff9 (model=seedance-1.5-pro)
+2026-03-11 10:22:07,740 [INFO] Video: https://tempfile.aiquickdraw.com/r/a9b652bbdb31e8c50fe1955b3f081ff9_1773224509_s
+2026-03-11 10:22:07,740 [INFO] Running Gemini QC...
+2026-03-11 10:22:07,741 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/a9b652bbdb31e8c50fe1955b3f081ff9_1773224509_s
+2026-03-11 10:22:08,518 [INFO] Uploading video to Gemini File API...
+2026-03-11 10:22:15,015 [INFO] Running Gemini QC evaluation...
+2026-03-11 10:22:24,105 [INFO] QC: pass=True, aesthetic=9, motion=9, scroll_stop=9, confidence=1.00
+2026-03-11 10:22:24,106 [INFO]   Minor: ['texture_shimmer']
+2026-03-11 10:22:24,106 [INFO]   Summary: The video presents a stunning, high-quality shot of a luxury infinity pool at sunset, with smooth camera motion and excellent aesthetic appeal, though very minor texture shimmer is present in the palm fronds.
+2026-03-11 10:22:24,106 [INFO] Reward: 94.0/100
+2026-03-11 10:22:26,106 [INFO] 
+--- v2_diverse_pool_1773224546 | Indoor heated pool with glass ceiling ---
+2026-03-11 10:22:26,106 [INFO] Generating cinematography prompt...
+2026-03-11 10:22:27,605 [INFO] Prompt: Single continuous shot. Camera gently rises from
+2026-03-11 10:22:27,605 [INFO] Generating image...
+2026-03-11 10:22:27,814 [INFO] Created task 5b5ed4267894648d2d9b702b47625f27 (model=seedream/4.5-text-to-image)
+2026-03-11 10:24:32,759 [INFO] Image: https://tempfile.aiquickdraw.com/f/a14619f5-672b-4e05-a4a0-9cf7d0718ca9_0.jpg
+2026-03-11 10:24:32,759 [INFO] Generating video...
+2026-03-11 10:24:33,410 [INFO] Created task 8d9d8f43f21f137b0d2c8f4c3cabc2ce (model=seedance-1.5-pro)
+2026-03-11 10:26:38,769 [INFO] Video: https://tempfile.aiquickdraw.com/r/8d9d8f43f21f137b0d2c8f4c3cabc2ce_1773224793_f
+2026-03-11 10:26:38,769 [INFO] Running Gemini QC...
+2026-03-11 10:26:38,769 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/8d9d8f43f21f137b0d2c8f4c3cabc2ce_1773224793_f
+2026-03-11 10:26:39,329 [INFO] Uploading video to Gemini File API...
+2026-03-11 10:26:43,002 [INFO] Running Gemini QC evaluation...
+2026-03-11 10:26:53,464 [INFO] QC: pass=False, aesthetic=9, motion=6, scroll_stop=8, confidence=0.90
+2026-03-11 10:26:53,464 [INFO]   Auto-fail: ['action_loop']
+2026-03-11 10:26:53,464 [INFO]   Minor: ['texture_shimmer']
+2026-03-11 10:26:53,464 [INFO]   Summary: The clip features a visually stunning luxury pool with excellent lighting and composition, but the obvious looping of the steam and water motion makes it unsuitable for professional marketing use.
+2026-03-11 10:26:53,464 [INFO] Reward: 73.6/100
+2026-03-11 10:26:55,465 [INFO] 
+--- v2_diverse_room_1773224815 | Suite with panoramic city view at night ---
+2026-03-11 10:26:55,465 [INFO] Generating cinematography prompt...
+2026-03-11 10:26:56,665 [INFO] Prompt: Single continuous shot. The camera gently
+2026-03-11 10:26:56,665 [INFO] Generating image...
+2026-03-11 10:26:57,194 [INFO] Created task 543a7eba080332280698a85d2332b723 (model=seedream/4.5-text-to-image)
+2026-03-11 10:27:23,741 [INFO] Image: https://tempfile.aiquickdraw.com/f/a1461b8f-7654-4e65-803e-8d6f91178294_0.jpg
+2026-03-11 10:27:23,741 [INFO] Generating video...
+2026-03-11 10:27:24,274 [INFO] Created task 4c4d977a3d6690fa047766d5a40194bf (model=seedance-1.5-pro)
+2026-03-11 10:28:59,914 [INFO] Video: https://tempfile.aiquickdraw.com/r/4c4d977a3d6690fa047766d5a40194bf_1773224921_4
+2026-03-11 10:28:59,914 [INFO] Running Gemini QC...
+2026-03-11 10:28:59,914 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/4c4d977a3d6690fa047766d5a40194bf_1773224921_4
+2026-03-11 10:29:00,704 [INFO] Uploading video to Gemini File API...
+2026-03-11 10:29:06,516 [INFO] Running Gemini QC evaluation...
+E0000 00:00:1773224946.863760   16309 http_connect_handshaker.cc:114] HTTP proxy handshake with [unknown] failed: UNKNOWN: FD Shutdown [type.googleapis.com/grpc.status.children='\x15\x00\x00\x00\x08\x0e\x12\x11\x65ndpoint shutdown']
+2026-03-11 10:29:15,253 [INFO] QC: pass=True, aesthetic=8, motion=7, scroll_stop=9, confidence=1.00
+2026-03-11 10:29:15,254 [INFO]   Minor: ['texture_shimmer', 'reflection_error']
+2026-03-11 10:29:15,254 [INFO]   Summary: The video successfully captures a luxurious hotel room with a stunning city view at night, featuring smooth camera motion, though minor texture shimmering and a slight reflection error are present.
+2026-03-11 10:29:15,254 [INFO] Reward: 88.0/100
+2026-03-11 10:29:17,254 [INFO] 
+--- v2_diverse_room_1773224957 | Tropical villa bedroom with garden view ---
+2026-03-11 10:29:17,254 [INFO] Generating cinematography prompt...
+2026-03-11 10:29:18,581 [INFO] Prompt: Single continuous shot. The camera gradually
+2026-03-11 10:29:18,581 [INFO] Generating image...
+2026-03-11 10:29:19,028 [INFO] Created task c303db9c36cc25591e400bfc6dfff7be (model=seedream/4.5-text-to-image)
+2026-03-11 10:29:44,774 [INFO] Image: https://tempfile.aiquickdraw.com/f/a1461c67-630a-4bf3-aa68-509b3b5f5229_0.jpg
+2026-03-11 10:29:44,774 [INFO] Generating video...
+2026-03-11 10:29:44,979 [INFO] Created task 09d83074499ba8d1cccb6967bc67ecdc (model=seedance-1.5-pro)
+2026-03-11 10:31:51,299 [INFO] Video: https://tempfile.aiquickdraw.com/r/09d83074499ba8d1cccb6967bc67ecdc_1773225088_x
+2026-03-11 10:31:51,299 [INFO] Running Gemini QC...
+2026-03-11 10:31:51,299 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/09d83074499ba8d1cccb6967bc67ecdc_1773225088_x
+2026-03-11 10:31:52,809 [INFO] Uploading video to Gemini File API...
+2026-03-11 10:31:56,719 [INFO] Running Gemini QC evaluation...
+2026-03-11 10:32:08,242 [INFO] QC: pass=False, aesthetic=8, motion=6, scroll_stop=9, confidence=1.00
+2026-03-11 10:32:08,242 [INFO]   Auto-fail: ['object_morphing', 'structural_collapse']
+2026-03-11 10:32:08,242 [INFO]   Minor: ['texture_shimmer', 'speed_inconsistency']
+2026-03-11 10:32:08,242 [INFO]   Summary: The video presents a beautiful and inviting scene with excellent lighting and composition, creating a strong sense of wanderlust, but it unfortunately fails due to subtle object morphing and structural collapse in the door frame, wardrobe, and bed, along with minor texture shimmering in the foliage.
+2026-03-11 10:32:08,242 [INFO] Reward: 57.2/100
+2026-03-11 10:32:10,242 [INFO] 
+--- v2_diverse_lobby_1773225130 | Modern minimalist hotel lobby ---
+2026-03-11 10:32:10,243 [INFO] Generating cinematography prompt...
+2026-03-11 10:32:11,891 [INFO] Prompt: Single continuous shot. Camera gently pans left
+2026-03-11 10:32:11,891 [INFO] Generating image...
+2026-03-11 10:32:12,279 [INFO] Created task e483b119017a4e2b051d63bced0c6bd0 (model=seedream/4.5-text-to-image)
+2026-03-11 10:32:38,362 [INFO] Image: https://tempfile.aiquickdraw.com/f/a1461d6f-1434-4080-ba95-cf779314b396_0.jpg
+2026-03-11 10:32:38,362 [INFO] Generating video...
+2026-03-11 10:32:38,856 [INFO] Created task 8f56ba4bb8231e0b42356f90f37f880c (model=seedance-1.5-pro)
+2026-03-11 10:34:43,727 [INFO] Video: https://tempfile.aiquickdraw.com/r/8f56ba4bb8231e0b42356f90f37f880c_1773225270_r
+2026-03-11 10:34:43,727 [INFO] Running Gemini QC...
+2026-03-11 10:34:43,727 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/8f56ba4bb8231e0b42356f90f37f880c_1773225270_r
+2026-03-11 10:34:44,696 [INFO] Uploading video to Gemini File API...
+2026-03-11 10:34:48,382 [INFO] Running Gemini QC evaluation...
+E0000 00:00:1773225288.767984   16307 http_connect_handshaker.cc:114] HTTP proxy handshake with [unknown] failed: UNKNOWN: FD Shutdown [type.googleapis.com/grpc.status.children='\x15\x00\x00\x00\x08\x0e\x12\x11\x65ndpoint shutdown']
+2026-03-11 10:34:59,279 [INFO] QC: pass=False, aesthetic=8, motion=4, scroll_stop=8, confidence=0.90
+2026-03-11 10:34:59,279 [INFO]   Auto-fail: ['object_morphing']
+2026-03-11 10:34:59,279 [INFO]   Minor: ['speed_inconsistency', 'texture_shimmer']
+2026-03-11 10:34:59,279 [INFO]   Summary: The video showcases a beautifully composed and lit modern hotel lobby with strong aesthetic appeal, but subtle object morphing in static elements like flowers and the wall art, along with texture shimmering, triggers a critical defect and detracts from motion quality.
+2026-03-11 10:34:59,279 [INFO] Reward: 60.4/100
+2026-03-11 10:35:01,279 [INFO] 
+--- v2_diverse_spa_1773225301 | Outdoor spa with mountain view ---
+2026-03-11 10:35:01,280 [INFO] Generating cinematography prompt...
+2026-03-11 10:35:02,692 [INFO] Prompt: Single continuous shot. Camera gently pulls
+2026-03-11 10:35:02,693 [INFO] Generating image...
+2026-03-11 10:35:03,036 [INFO] Created task c9027c36660f70f729525e8edc9df82e (model=seedream/4.5-text-to-image)
+2026-03-11 10:37:38,888 [INFO] Image: https://tempfile.aiquickdraw.com/f/a1461e72-de70-47cb-ab14-b3fb5454389d_0.jpg
+2026-03-11 10:37:38,888 [INFO] Generating video...
+2026-03-11 10:37:39,534 [INFO] Created task e8aaa814fa0332d485b3f8643e434a77 (model=seedance-1.5-pro)
+2026-03-11 10:39:45,594 [INFO] Video: https://tempfile.aiquickdraw.com/r/e8aaa814fa0332d485b3f8643e434a77_1773225563_0
+2026-03-11 10:39:45,594 [INFO] Running Gemini QC...
+2026-03-11 10:39:45,594 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/e8aaa814fa0332d485b3f8643e434a77_1773225563_0
+2026-03-11 10:39:46,192 [INFO] Uploading video to Gemini File API...
+E0000 00:00:1773225587.728948   16299 http_connect_handshaker.cc:114] HTTP proxy handshake with [unknown] failed: UNKNOWN: FD Shutdown [type.googleapis.com/grpc.status.children='\x15\x00\x00\x00\x08\x0e\x12\x11\x65ndpoint shutdown']
+2026-03-11 10:39:52,081 [INFO] Running Gemini QC evaluation...
+2026-03-11 10:40:04,004 [INFO] QC: pass=False, aesthetic=5, motion=3, scroll_stop=5, confidence=1.00
+2026-03-11 10:40:04,004 [INFO]   Summary: 
+2026-03-11 10:40:04,004 [INFO] Reward: 72.0/100
+2026-03-11 10:40:06,005 [INFO] 
+--- v2_diverse_restaurant_1773225606 | Rooftop restaurant at twilight ---
+2026-03-11 10:40:06,005 [INFO] Generating cinematography prompt...
+2026-03-11 10:40:07,349 [INFO] Prompt: Single continuous shot. Camera
+2026-03-11 10:40:07,349 [INFO] Generating image...
+2026-03-11 10:40:08,009 [INFO] Created task 1f08124b9da0b800f39dce9a62bf2959 (model=seedream/4.5-text-to-image)
+2026-03-11 10:41:13,109 [INFO] Image: https://tempfile.aiquickdraw.com/f/a1462046-75fa-4cbe-83bd-3bb01dd7486b_0.jpg
+2026-03-11 10:41:13,109 [INFO] Generating video...
+2026-03-11 10:41:13,451 [INFO] Created task 42b5bc6c58e080fcb764fee0d1933967 (model=seedance-1.5-pro)
+2026-03-11 10:43:19,050 [INFO] Video: https://tempfile.aiquickdraw.com/r/42b5bc6c58e080fcb764fee0d1933967_1773225793_3
+2026-03-11 10:43:19,050 [INFO] Running Gemini QC...
+2026-03-11 10:43:19,050 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/42b5bc6c58e080fcb764fee0d1933967_1773225793_3
+2026-03-11 10:43:20,641 [INFO] Uploading video to Gemini File API...
+E0000 00:00:1773225802.297876   16310 http_connect_handshaker.cc:114] HTTP proxy handshake with [unknown] failed: UNKNOWN: FD Shutdown [type.googleapis.com/grpc.status.children='\x15\x00\x00\x00\x08\x0e\x12\x11\x65ndpoint shutdown']
+2026-03-11 10:43:24,673 [INFO] Running Gemini QC evaluation...
+2026-03-11 10:43:35,212 [INFO] QC: pass=False, aesthetic=7, motion=5, scroll_stop=8, confidence=1.00
+2026-03-11 10:43:35,213 [INFO]   Auto-fail: ['object_morphing', 'structural_collapse']
+2026-03-11 10:43:35,213 [INFO]   Minor: ['slight_flicker', 'edge_softness', 'color_drift', 'speed_inconsistency', 'texture_shimmer']
+2026-03-11 10:43:35,213 [INFO]   Summary: The video presents a highly appealing romantic rooftop restaurant scene with a beautiful sunset, but suffers from noticeable object morphing in the string lights, furniture, and distant buildings, leading to an auto-fail.
+2026-03-11 10:43:35,213 [INFO] Reward: 42.0/100
+2026-03-11 10:43:37,213 [INFO] 
+--- v2_diverse_exterior_1773225817 | Hotel facade with fountain at entrance ---
+2026-03-11 10:43:37,213 [INFO] Generating cinematography prompt...
+2026-03-11 10:43:38,605 [INFO] Prompt: Single continuous shot. The
+2026-03-11 10:43:38,605 [INFO] Generating image...
+2026-03-11 10:43:39,219 [INFO] Created task c228290af01fece3d0a5bd81cf2bd8d9 (model=seedream/4.5-text-to-image)
+2026-03-11 10:44:44,632 [INFO] Image: https://tempfile.aiquickdraw.com/f/a1462194-b4c6-45b4-a339-788b85bbfd28_0.jpg
+2026-03-11 10:44:44,632 [INFO] Generating video...
+2026-03-11 10:44:44,960 [INFO] Created task 19809bfec92ac98fe3f2caecfdaf80d4 (model=seedance-1.5-pro)
+2026-03-11 10:46:19,902 [INFO] Video: https://tempfile.aiquickdraw.com/r/19809bfec92ac98fe3f2caecfdaf80d4_1773225957_0
+2026-03-11 10:46:19,902 [INFO] Running Gemini QC...
+2026-03-11 10:46:19,902 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/19809bfec92ac98fe3f2caecfdaf80d4_1773225957_0
+2026-03-11 10:46:20,801 [INFO] Uploading video to Gemini File API...
+2026-03-11 10:46:26,588 [INFO] Running Gemini QC evaluation...
+2026-03-11 10:46:40,331 [INFO] QC: pass=True, aesthetic=9, motion=7, scroll_stop=9, confidence=1.00
+2026-03-11 10:46:40,332 [INFO]   Minor: ['speed_inconsistency', 'texture_shimmer']
+2026-03-11 10:46:40,332 [INFO]   Summary: The video presents a highly aesthetic and luxurious hotel entrance with a beautiful fountain and warm lighting, effectively creating a grand and inviting atmosphere, despite minor texture shimmering and subtle camera speed inconsistencies.
+2026-03-11 10:46:40,332 [INFO] Reward: 90.0/100
+2026-03-11 10:46:42,332 [INFO] 
+--- v2_diverse_beach_1773226002 | Private beach cabana setup ---
+2026-03-11 10:46:42,332 [INFO] Generating cinematography prompt...
+2026-03-11 10:46:43,683 [INFO] Prompt: Single continuous shot. Camera gradually
+2026-03-11 10:46:43,683 [INFO] Generating image...
+2026-03-11 10:46:44,006 [INFO] Created task a6e460c7e890006e74df973eb2ab8402 (model=seedream/4.5-text-to-image)
+2026-03-11 10:47:49,522 [INFO] Image: https://tempfile.aiquickdraw.com/f/a14622a1-5dce-4b44-81b9-d1e885dc4ff2_0.jpg
+2026-03-11 10:47:49,522 [INFO] Generating video...
+2026-03-11 10:47:50,048 [INFO] Created task d76bcb932a15a828de35cdcb6e18a2a4 (model=seedance-1.5-pro)
+2026-03-11 10:50:31,476 [INFO] Video: https://tempfile.aiquickdraw.com/r/d76bcb932a15a828de35cdcb6e18a2a4_1773226199_d
+2026-03-11 10:50:31,476 [INFO] Running Gemini QC...
+2026-03-11 10:50:31,476 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/d76bcb932a15a828de35cdcb6e18a2a4_1773226199_d
+2026-03-11 10:50:32,352 [INFO] Uploading video to Gemini File API...
+2026-03-11 10:50:38,121 [INFO] Running Gemini QC evaluation...
+2026-03-11 10:50:47,604 [INFO] QC: pass=False, aesthetic=8, motion=4, scroll_stop=9, confidence=1.00
+2026-03-11 10:50:47,604 [INFO]   Auto-fail: ['action_loop', 'object_morphing']
+2026-03-11 10:50:47,605 [INFO]   Minor: ['texture_shimmer']
+2026-03-11 10:50:47,605 [INFO]   Summary: The video features a stunning aesthetic with excellent composition and lighting, but is critically flawed by noticeable looping in the ocean waves and subtle morphing of the cabana curtains and sand.
+2026-03-11 10:50:47,605 [INFO] Reward: 60.4/100
+2026-03-11 10:50:49,605 [WARNING] Approaching KIE budget limit, stopping generation
+2026-03-11 10:50:49,605 [INFO] 
+======================================================================
+2026-03-11 10:50:49,605 [INFO] POST-PROCESSING
+2026-03-11 10:50:49,605 [INFO] ======================================================================
+2026-03-11 10:50:49,606 [INFO] Raw results saved to eval_results/full_pipeline_20260311_105049.json
+2026-03-11 10:50:49,607 [INFO] 
+--- Prompt Feature Correlation ---
+2026-03-11 10:50:49,610 [INFO]   has_camera_move: r=+0.359 ↑
+2026-03-11 10:50:49,610 [INFO]   has_speed_modifier: r=+0.149 ↑
+2026-03-11 10:50:49,610 [INFO]   word_count: r=+0.099 ↑
+2026-03-11 10:50:49,610 [INFO]   has_single_continuous_shot: r=+0.000 ↓
+2026-03-11 10:50:49,610 [INFO]   has_sky_freeze: r=+0.000 ↓
+2026-03-11 10:50:49,610 [INFO]   has_stable_element: r=+0.000 ↓
+2026-03-11 10:50:49,610 [INFO]   has_human_instruction: r=+0.000 ↓
+2026-03-11 10:50:49,610 [INFO]   motion_element_count: r=+0.000 ↓
+2026-03-11 10:50:49,610 [INFO]   sentence_count: r=+0.000 ↓
+2026-03-11 10:50:49,610 [INFO] High-score patterns: ['has_camera_move (high-reward avg=0.62 vs low=0.20)']
+2026-03-11 10:50:49,610 [INFO] 
+--- Per-System-Prompt Performance ---
+2026-03-11 10:50:49,610 [INFO]   v1: avg_reward=70.7, pass_rate=30%, n=10
+2026-03-11 10:50:49,610 [INFO]   v2_diverse: avg_reward=70.8, pass_rate=33%, n=9
+2026-03-11 10:50:49,610 [INFO] 
+--- Per-Scene-Type Performance ---
+2026-03-11 10:50:49,611 [INFO]   bathroom: avg_reward=56.4, n=1
+2026-03-11 10:50:49,611 [INFO]   beach: avg_reward=54.8, n=2
+2026-03-11 10:50:49,611 [INFO]   exterior: avg_reward=78.8, n=2
+2026-03-11 10:50:49,611 [INFO]   lobby: avg_reward=51.2, n=2
+2026-03-11 10:50:49,611 [INFO]   pool: avg_reward=88.4, n=4
+2026-03-11 10:50:49,611 [INFO]   restaurant: avg_reward=62.0, n=2
+2026-03-11 10:50:49,611 [INFO]   room: avg_reward=73.6, n=4
+2026-03-11 10:50:49,611 [INFO]   spa: avg_reward=73.4, n=2
+2026-03-11 10:50:49,611 [INFO] 
+--- OPRO Optimization ---
+2026-03-11 10:50:49,611 [INFO] 
+Optimizing: v1
+2026-03-11 10:51:11,258 [INFO] Improved prompt saved to system_prompts/v1_improved_20260311_105049.txt
+2026-03-11 10:51:11,258 [INFO] First 200 chars: You are a cinematography director creating short hotel marketing video clips for AI video generation (Seedance 1.5 Pro). Your goal is to generate smooth, high-quality, artifact-free video prompts with
+2026-03-11 10:51:11,258 [INFO] 
+Optimizing: v2_diverse
+2026-03-11 10:51:29,596 [INFO] Improved prompt saved to system_prompts/v2_diverse_improved_20260311_105049.txt
+2026-03-11 10:51:29,596 [INFO] First 200 chars: You are a cinematography director for hotel marketing videos generated by Seedance 1.5 Pro.
+
+Your output is a single cinematography prompt, **precisely 30-45 words in length**, for each hotel scene.
+
+
+2026-03-11 10:51:29,596 [INFO] 
+Report saved to eval_results/report_20260311_105049.md
+2026-03-11 10:51:29,596 [INFO] 
+======================================================================
+2026-03-11 10:51:29,596 [INFO] PIPELINE COMPLETE
+2026-03-11 10:51:29,596 [INFO] Total API calls: KIE=38, Gemini QC=19
+2026-03-11 10:51:29,596 [INFO] ======================================================================

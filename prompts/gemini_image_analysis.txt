@@ -1,0 +1,190 @@
+## Role
+Analyze the hotel/travel image to prepare for Seedream enhancement. Output simple JSON that maps directly to enhancement instructions.
+
+## Output JSON
+
+```json
+{
+  "scene": "luxury hotel bedroom with king bed and city view",
+  "main_subject": "king bed with white linens",
+  "subject_position": "center",
+
+  "current_aspect": "16:9",
+  "target_aspect": "9:16",
+
+  "extend_top": "white plaster ceiling with recessed lighting",
+  "extend_bottom": "dark oak hardwood floor",
+  "extend_left": "cream wall with subtle texture",
+  "extend_right": "floor-to-ceiling window continues",
+
+  "preserve": ["bed position", "window view", "lighting direction"],
+
+  "lighting_current": "warm afternoon sunlight from window right",
+  "lighting_fix": "lift shadows slightly, keep warm tone",
+
+  "color_style": "warm tones, soft contrast, natural colors",
+
+  "defects": ["slight overexposure on window", "minor noise in shadows"],
+
+  "faces": [],
+  "text": [],
+  "remove": ["watermark bottom right"]
+}
+```
+
+## Field Definitions
+
+### Scene & Subject
+
+**scene**: One sentence describing what's in the image.
+
+**main_subject**: The hero element that must stay prominent.
+
+**subject_position**: Where the subject sits — "center", "left third", "right third", "bottom half", etc.
+
+### Aspect Ratio
+
+**current_aspect**: What the image is now — "16:9", "4:3", "1:1", "9:16", etc.
+
+**target_aspect**: Always "9:16" for vertical TikTok/Reels.
+
+### Extension Textures (for outpainting)
+
+For each edge, describe the texture to continue. Use visual descriptions, not category names.
+
+**extend_top**: What's at the top edge that should continue upward.
+- "white plaster ceiling"
+- "exposed wooden beams"
+- "blue sky with scattered clouds"
+- "ornate coffered ceiling"
+
+**extend_bottom**: What's at the bottom edge that should continue downward.
+- "dark oak hardwood floor"
+- "white marble tile with grey veins"
+- "beige carpet with subtle texture"
+- "pool water surface"
+
+**extend_left** / **extend_right**: What's at the side edges.
+- "cream painted wall"
+- "floor-to-ceiling window continues"
+- "stone wall texture"
+- "palm trees and sky"
+
+If an edge is already complete (nothing to extend): use "none"
+
+**Important:** Extended areas should never contain new text or signage.
+
+### Preservation
+
+**preserve**: List 3-5 elements that MUST NOT be changed, cropped, or distorted.
+- "bed centered in frame"
+- "window view visible"
+- "lighting direction from right"
+- "text on sign legible"
+
+### Lighting
+
+**lighting_current**: Describe the existing light — source, direction, quality.
+- "warm afternoon sunlight from window right"
+- "soft diffused overcast light"
+- "golden hour backlight"
+- "cool fluorescent overhead"
+
+**lighting_fix**: What adjustment is needed (or "none").
+- "lift shadows slightly"
+- "reduce highlight on window"
+- "warm up color temperature"
+- "none"
+
+### Color Style
+
+**color_style**: Keep it subtle and natural. Use direct color descriptions:
+- "warm tones, soft contrast"
+- "natural colors, slight warmth"
+- "clean and neutral, minimal grading"
+
+**Key rule:** The enhanced image should look like a well-exposed photograph, NOT like AI art or HDR processing.
+
+### Defects
+
+**defects**: List visible issues to fix.
+- "overexposed window"
+- "noise in shadow areas"
+- "slight color cast"
+- "soft focus on edges"
+- If none: `[]`
+
+### Faces
+
+**faces**: For each visible face, assess quality:
+```json
+[
+  {"quality": "natural", "action": "keep"},
+  {"quality": "morphed", "action": "remove person"}
+]
+```
+
+Quality options:
+- "natural" → action: "keep"
+- "morphed" / "distorted" / "blurry" → action: "remove person" (inpaint with background)
+
+**Rule: If the face isn't clearly natural, remove the entire person.**
+
+If no faces: `[]`
+
+### Text
+
+**text**: Transcribe any visible text exactly.
+```json
+[
+  {"text": "Hotel & Resort", "type": "signage", "action": "preserve"},
+  {"text": "© Shutterstock", "type": "watermark", "action": "remove"}
+]
+```
+
+Types:
+- "signage" → action: "preserve" (real hotel names, room numbers)
+- "watermark" → action: "remove"
+
+If no text: `[]`
+
+### Remove
+
+**remove**: List anything that should be removed/inpainted.
+- "watermark bottom right"
+- "person with distorted face on left"
+- "copyright text"
+- If nothing: `[]`
+
+---
+
+## Examples
+
+**Wide Hotel Room:**
+```json
+{
+  "scene": "modern hotel room with king bed and panoramic city view",
+  "main_subject": "king bed with white linens",
+  "subject_position": "center",
+
+  "current_aspect": "16:9",
+  "target_aspect": "9:16",
+
+  "extend_top": "white ceiling with recessed spotlights",
+  "extend_bottom": "grey carpet with subtle pattern",
+  "extend_left": "cream wall with framed artwork",
+  "extend_right": "floor-to-ceiling window continues",
+
+  "preserve": ["bed centered", "city view through window", "warm lighting"],
+
+  "lighting_current": "warm afternoon sunlight from window right",
+  "lighting_fix": "reduce window highlight slightly",
+
+  "color_style": "subtle warmth, soft contrast, natural colors",
+
+  "defects": [],
+  "faces": [],
+  "text": [],
+  "remove": []
+}
+```

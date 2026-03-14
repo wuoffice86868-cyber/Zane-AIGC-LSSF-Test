@@ -1,0 +1,97 @@
+{
+  "pool": {
+    "qc": {
+      "pass": true,
+      "confidence": 1.0,
+      "human_present": false,
+      "auto_fail_triggered": [],
+      "minor_issues": [
+        "edge_softness",
+        "texture_shimmer"
+      ],
+      "summary": "This clip features a beautiful golden hour resort pool scene with natural water movement and palm tree sway, though some minor edge softness and subtle texture shimmer are present.",
+      "aesthetic_score": 8,
+      "motion_score": 9,
+      "prompt_adherence_score": 9,
+      "scene_type_detected": "pool"
+    },
+    "reward": 92.00000000000001,
+    "breakdown": {
+      "qc_score": 100.0,
+      "aesthetic_score": 0.8,
+      "clip_score": 0.9,
+      "motion_score": 0.9,
+      "weights": {
+        "qc": 0.4,
+        "aesthetic": 0.2,
+        "clip": 0.2,
+        "motion": 0.2
+      }
+    }
+  },
+  "room": {
+    "qc": {
+      "pass": false,
+      "confidence": 1.0,
+      "human_present": false,
+      "auto_fail_triggered": [
+        "object_morphing",
+        "structural_collapse"
+      ],
+      "minor_issues": [
+        "texture_shimmer"
+      ],
+      "summary": "The video features a well-composed luxury hotel room with a city view, but suffers from noticeable object morphing in the furniture and city buildings, as well as subtle structural collapse in the window frames and ceiling, making it unusable for marketing.",
+      "aesthetic_score": 4,
+      "motion_score": 4,
+      "prompt_adherence_score": 8,
+      "scene_type_detected": "room"
+    },
+    "reward": 50.4,
+    "breakdown": {
+      "qc_score": 46.0,
+      "aesthetic_score": 0.4,
+      "clip_score": 0.8,
+      "motion_score": 0.4,
+      "weights": {
+        "qc": 0.4,
+        "aesthetic": 0.2,
+        "clip": 0.2,
+        "motion": 0.2
+      }
+    }
+  },
+  "lobby": {
+    "qc": {
+      "pass": false,
+      "confidence": 1.0,
+      "human_present": false,
+      "auto_fail_triggered": [
+        "object_morphing"
+      ],
+      "minor_issues": [
+        "speed_inconsistency",
+        "texture_shimmer",
+        "reflection_error"
+      ],
+      "summary": "The video presents a grand hotel lobby with a good composition and warm lighting, but it fails due to significant object morphing in the chandelier crystals and distorted floor reflections, making it unusable for marketing.",
+      "aesthetic_score": 3,
+      "motion_score": 5,
+      "prompt_adherence_score": 9,
+      "scene_type_detected": "lobby"
+    },
+    "reward": 47.199999999999996,
+    "breakdown": {
+      "qc_score": 33.0,
+      "aesthetic_score": 0.3,
+      "clip_score": 0.9,
+      "motion_score": 0.5,
+      "weights": {
+        "qc": 0.4,
+        "aesthetic": 0.2,
+        "clip": 0.2,
+        "motion": 0.2
+      }
+    }
+  }
+}

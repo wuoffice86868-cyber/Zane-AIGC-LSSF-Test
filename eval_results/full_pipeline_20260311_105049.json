@@ -1,0 +1,1113 @@
+{
+  "run_info": {
+    "timestamp": "2026-03-11T10:50:49.605737+00:00",
+    "system_prompts": [
+      "v1",
+      "v2_diverse"
+    ],
+    "scenes_count": 10,
+    "total_samples": 19,
+    "kie_stats": "KIE API Stats: 38 requests (38 ok, 0 failed) | Images: 19, Videos: 19 | Total gen time: 3.4s",
+    "gemini_evals": 19
+  },
+  "results": [
+    {
+      "sample_id": "v1_pool_1773221871",
+      "system_prompt_version": "v1",
+      "scene_type": "pool",
+      "scene_description": "Luxury infinity pool overlooking ocean at sunset",
+      "generated_prompt": "Single continuous shot gently pushes",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1460a06-746e-4475-859e-910c3b300c22_0.jpg",
+      "image_task_id": "34c2271b438d45613bc5c3c49f5a9053",
+      "video_url": "https://tempfile.aiquickdraw.com/r/eed78a499441a30d5573e5cd176c076c_1773222093_yuwafyps.mp4",
+      "video_task_id": "eed78a499441a30d5573e5cd176c076c",
+      "qc_result": {
+        "pass": true,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [],
+        "minor_issues": [
+          "slight_flicker",
+          "texture_shimmer"
+        ],
+        "summary": "This clip features stunning golden hour aesthetics and smooth camera motion, effectively conveying a luxurious tropical vibe, though minor texture shimmer and slight flicker are present.",
+        "aesthetic_score": 9,
+        "motion_score": 9,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "pool"
+      },
+      "reward": {
+        "total_score": 94.00000000000001,
+        "breakdown": {
+          "qc_score": 100.0,
+          "aesthetic_score": 0.9,
+          "clip_score": 0.9,
+          "motion_score": 0.9,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 5,
+        "has_camera_move": true,
+        "camera_move_type": "push",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "gently",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v1_pool_1773222141",
+      "system_prompt_version": "v1",
+      "scene_type": "pool",
+      "scene_description": "Indoor heated pool with glass ceiling",
+      "generated_prompt": "Single continuous shot, camera gently pushes",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1460ba2-2866-45a6-9b7f-c32f1903cc41_0.jpg",
+      "image_task_id": "c45201b2defeac52fe2dd7745cbabfd3",
+      "video_url": "https://tempfile.aiquickdraw.com/r/1f61e6e7eaf4742e1908649f95ce1529_1773222305_fh4438ei.mp4",
+      "video_task_id": "1f61e6e7eaf4742e1908649f95ce1529",
+      "qc_result": {
+        "pass": true,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [],
+        "minor_issues": [],
+        "summary": "This clip excels in creating a luxurious and serene indoor pool atmosphere with strong aesthetic appeal and lighting, despite the steam motion being slightly repetitive in its generation.",
+        "aesthetic_score": 9,
+        "motion_score": 8,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "pool"
+      },
+      "reward": {
+        "total_score": 92.00000000000001,
+        "breakdown": {
+          "qc_score": 100.0,
+          "aesthetic_score": 0.9,
+          "clip_score": 0.9,
+          "motion_score": 0.8,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 6,
+        "has_camera_move": true,
+        "camera_move_type": "push",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "gently",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v1_room_1773222343",
+      "system_prompt_version": "v1",
+      "scene_type": "room",
+      "scene_description": "Suite with panoramic city view at night",
+      "generated_prompt": "Single continuous shot, the camera gently",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1460cd3-8597-47f4-aaf7-44bea8af2908_0.jpg",
+      "image_task_id": "6c3ac639b2cb377e6c2c856c07eb3f26",
+      "video_url": "https://tempfile.aiquickdraw.com/r/1998f679e8e3de24179899fc45a42534_1773222479_n5z8kbrx.mp4",
+      "video_task_id": "1998f679e8e3de24179899fc45a42534",
+      "qc_result": {
+        "pass": false,
+        "confidence": 0.95,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "object_morphing"
+        ],
+        "minor_issues": [
+          "slight_flicker",
+          "texture_shimmer",
+          "reflection_error"
+        ],
+        "summary": "The video presents a luxurious hotel room with a stunning city view, achieving a high aesthetic and scroll-stopping initial impression, but it auto-fails due to noticeable object morphing in the chandelier, headboard, and flowers, which detracts significantly from motion quality.",
+        "aesthetic_score": 7,
+        "motion_score": 5,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 8,
+        "scene_type_detected": "room"
+      },
+      "reward": {
+        "total_score": 55.2,
+        "breakdown": {
+          "qc_score": 33.0,
+          "aesthetic_score": 0.7,
+          "clip_score": 0.9,
+          "motion_score": 0.5,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 6,
+        "has_camera_move": false,
+        "camera_move_type": "",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "gently",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v1_room_1773222517",
+      "system_prompt_version": "v1",
+      "scene_type": "room",
+      "scene_description": "Tropical villa bedroom with garden view",
+      "generated_prompt": "Single continuous shot, camera gently",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1460de7-a703-4011-9ee0-18a665e5e35a_0.jpg",
+      "image_task_id": "1bd990d26c01b60c1eb6cd4c59efe454",
+      "video_url": "https://tempfile.aiquickdraw.com/r/252eb62692b43495e59c0399e1d55717_1773222874_iy7w81ns.mp4",
+      "video_task_id": "252eb62692b43495e59c0399e1d55717",
+      "qc_result": {
+        "pass": true,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [],
+        "minor_issues": [
+          "texture_shimmer"
+        ],
+        "summary": "This clip features excellent aesthetic quality with warm golden hour lighting and smooth camera motion, effectively conveying a luxurious and serene tropical bedroom, despite very minor texture shimmering.",
+        "aesthetic_score": 9,
+        "motion_score": 9,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "room"
+      },
+      "reward": {
+        "total_score": 94.00000000000001,
+        "breakdown": {
+          "qc_score": 100.0,
+          "aesthetic_score": 0.9,
+          "clip_score": 0.9,
+          "motion_score": 0.9,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 5,
+        "has_camera_move": false,
+        "camera_move_type": "",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "gently",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v1_lobby_1773222910",
+      "system_prompt_version": "v1",
+      "scene_type": "lobby",
+      "scene_description": "Modern minimalist hotel lobby",
+      "generated_prompt": "Single continuous shot: Camera gradually",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1461036-da37-44d5-9e69-dd2fec9cd2b7_0.jpg",
+      "image_task_id": "7a62ffef8c9846a02c4f2ca55176edd0",
+      "video_url": "https://tempfile.aiquickdraw.com/r/480f2a8683badf8cb2555082edfd41fa_1773223036_88l23ncj.mp4",
+      "video_task_id": "480f2a8683badf8cb2555082edfd41fa",
+      "qc_result": {
+        "pass": false,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "object_morphing",
+          "structural_collapse"
+        ],
+        "minor_issues": [
+          "slight_flicker",
+          "color_drift",
+          "speed_inconsistency",
+          "texture_shimmer"
+        ],
+        "summary": "The video showcases a beautifully composed and lit modern hotel lobby, but it fails due to subtle yet pervasive object morphing in the flowers and painting, and structural breathing in the concrete wall and wooden elements.",
+        "aesthetic_score": 7,
+        "motion_score": 5,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 8,
+        "scene_type_detected": "lobby"
+      },
+      "reward": {
+        "total_score": 42.00000000000001,
+        "breakdown": {
+          "qc_score": 0.0,
+          "aesthetic_score": 0.7,
+          "clip_score": 0.9,
+          "motion_score": 0.5,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 5,
+        "has_camera_move": false,
+        "camera_move_type": "",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "gradually",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v1_spa_1773223082",
+      "system_prompt_version": "v1",
+      "scene_type": "spa",
+      "scene_description": "Outdoor spa with mountain view",
+      "generated_prompt": "Single continuous shot, camera gently pushes",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1461155-af4a-45e5-bf7a-e1d51ba93a3d_0.jpg",
+      "image_task_id": "4edf37de26e4deb1ca6bd132fbd975e4",
+      "video_url": "https://tempfile.aiquickdraw.com/r/34e976289340a7cee3627e5d98c0a4e7_1773223417_0v8gbn9e.mp4",
+      "video_task_id": "34e976289340a7cee3627e5d98c0a4e7",
+      "qc_result": {
+        "pass": false,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "action_loop"
+        ],
+        "minor_issues": [],
+        "summary": "The video features a stunning and inviting outdoor hot tub scene with excellent composition and lighting, but it auto-fails due to obvious temporal looping in the hot tub's water ripples and steam.",
+        "aesthetic_score": 7,
+        "motion_score": 4,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 8,
+        "scene_type_detected": "spa"
+      },
+      "reward": {
+        "total_score": 74.8,
+        "breakdown": {
+          "qc_score": 87.0,
+          "aesthetic_score": 0.7,
+          "clip_score": 0.9,
+          "motion_score": 0.4,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 6,
+        "has_camera_move": true,
+        "camera_move_type": "push",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "gently",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v1_restaurant_1773223446",
+      "system_prompt_version": "v1",
+      "scene_type": "restaurant",
+      "scene_description": "Rooftop restaurant at twilight",
+      "generated_prompt": "Single continuous shot: Camera gently pushes forward",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1461364-7e1d-4360-8ce6-5d1545a571c6_0.jpg",
+      "image_task_id": "c3bb98acc31745db8d102710beae8a80",
+      "video_url": "https://tempfile.aiquickdraw.com/r/a354fb6a676655a23a5f9c4fd352f0a2_1773223594_j9nh87b8.mp4",
+      "video_task_id": "a354fb6a676655a23a5f9c4fd352f0a2",
+      "qc_result": {
+        "pass": false,
+        "confidence": 0.9,
+        "human_present": false,
+        "auto_fail_triggered": [],
+        "minor_issues": [],
+        "summary": "",
+        "aesthetic_score": 8,
+        "motion_score": 4,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 5,
+        "scene_type_detected": "other"
+      },
+      "reward": {
+        "total_score": 82.0,
+        "breakdown": {
+          "qc_score": 100.0,
+          "aesthetic_score": 0.8,
+          "clip_score": 0.9,
+          "motion_score": 0.4,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 7,
+        "has_camera_move": true,
+        "camera_move_type": "push",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "gently",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v1_exterior_1773223619",
+      "system_prompt_version": "v1",
+      "scene_type": "exterior",
+      "scene_description": "Hotel facade with fountain at entrance",
+      "generated_prompt": "Single continuous shot, the",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1461473-381e-4873-8c53-984c51deab5a_0.jpg",
+      "image_task_id": "33fc908e157f48f7c02d679de5467205",
+      "video_url": "https://tempfile.aiquickdraw.com/r/a792a90766c961285f7a5c617bf228c3_1773223762_c75g2x95.mp4",
+      "video_task_id": "a792a90766c961285f7a5c617bf228c3",
+      "qc_result": {
+        "pass": false,
+        "confidence": 0.9,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "object_morphing",
+          "action_loop"
+        ],
+        "minor_issues": [],
+        "summary": "",
+        "aesthetic_score": 8,
+        "motion_score": 5,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 5,
+        "scene_type_detected": "other"
+      },
+      "reward": {
+        "total_score": 67.60000000000001,
+        "breakdown": {
+          "qc_score": 59.0,
+          "aesthetic_score": 0.8,
+          "clip_score": 0.9,
+          "motion_score": 0.5,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 4,
+        "has_camera_move": false,
+        "camera_move_type": "",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": false,
+        "speed_modifier": "",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v1_beach_1773223792",
+      "system_prompt_version": "v1",
+      "scene_type": "beach",
+      "scene_description": "Private beach cabana setup",
+      "generated_prompt": "Single continuous shot: Camera gently pushes forward",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a146157f-7546-4f52-b383-3f7013f127cc_0.jpg",
+      "image_task_id": "9a8a9e989dad69870e6d90877357712c",
+      "video_url": "https://tempfile.aiquickdraw.com/r/20216573ebaa3e685bc6cd3af193aef8_1773224207_lnuqlna5.mp4",
+      "video_task_id": "20216573ebaa3e685bc6cd3af193aef8",
+      "qc_result": {
+        "pass": false,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "action_loop",
+          "sky_anomaly"
+        ],
+        "minor_issues": [
+          "texture_shimmer",
+          "speed_inconsistency"
+        ],
+        "summary": "The clip features a stunning tropical beach sunset with a luxury cabana, but suffers from noticeable looping waves and unnaturally fast, smearing clouds, significantly detracting from its professional polish.",
+        "aesthetic_score": 7,
+        "motion_score": 4,
+        "prompt_adherence_score": 8,
+        "scroll_stop_score": 8,
+        "scene_type_detected": "beach"
+      },
+      "reward": {
+        "total_score": 49.2,
+        "breakdown": {
+          "qc_score": 28.0,
+          "aesthetic_score": 0.7,
+          "clip_score": 0.8,
+          "motion_score": 0.4,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 7,
+        "has_camera_move": true,
+        "camera_move_type": "push",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "gently",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v1_bathroom_1773224247",
+      "system_prompt_version": "v1",
+      "scene_type": "bathroom",
+      "scene_description": "Marble bathroom with freestanding tub",
+      "generated_prompt": "Single continuous shot, camera gently pushes",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a146183b-a93d-433d-b032-1e3472256a95_0.jpg",
+      "image_task_id": "7f0104eeea3dda7d585485f55ffb24e8",
+      "video_url": "https://tempfile.aiquickdraw.com/r/23b0530d09c539e5b1c7cd3dc4c47f17_1773224366_hmoj161t.mp4",
+      "video_task_id": "23b0530d09c539e5b1c7cd3dc4c47f17",
+      "qc_result": {
+        "pass": false,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "object_morphing",
+          "structural_collapse"
+        ],
+        "minor_issues": [
+          "texture_shimmer"
+        ],
+        "summary": "The clip features a beautifully composed and lit luxury bathroom, but it fails due to persistent object morphing in the plant and bathtub, and structural collapse with the subtly shifting marble tiles and window frame, significantly detracting from its professional polish and motion quality.",
+        "aesthetic_score": 6,
+        "motion_score": 4,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 8,
+        "scene_type_detected": "bathroom"
+      },
+      "reward": {
+        "total_score": 56.400000000000006,
+        "breakdown": {
+          "qc_score": 46.0,
+          "aesthetic_score": 0.6,
+          "clip_score": 0.9,
+          "motion_score": 0.4,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 6,
+        "has_camera_move": true,
+        "camera_move_type": "push",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "gently",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v2_diverse_pool_1773224404",
+      "system_prompt_version": "v2_diverse",
+      "scene_type": "pool",
+      "scene_description": "Luxury infinity pool overlooking ocean at sunset",
+      "generated_prompt": "Single continuous shot. Camera gently pulls",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a146191a-50eb-4a4b-a43a-67023ac8cbec_0.jpg",
+      "image_task_id": "bfbd5e487ad7ab58553b4cfc91dc26eb",
+      "video_url": "https://tempfile.aiquickdraw.com/r/a9b652bbdb31e8c50fe1955b3f081ff9_1773224509_skfs1uc9.mp4",
+      "video_task_id": "a9b652bbdb31e8c50fe1955b3f081ff9",
+      "qc_result": {
+        "pass": true,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [],
+        "minor_issues": [
+          "texture_shimmer"
+        ],
+        "summary": "The video presents a stunning, high-quality shot of a luxury infinity pool at sunset, with smooth camera motion and excellent aesthetic appeal, though very minor texture shimmer is present in the palm fronds.",
+        "aesthetic_score": 9,
+        "motion_score": 9,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "pool"
+      },
+      "reward": {
+        "total_score": 94.00000000000001,
+        "breakdown": {
+          "qc_score": 100.0,
+          "aesthetic_score": 0.9,
+          "clip_score": 0.9,
+          "motion_score": 0.9,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 6,
+        "has_camera_move": true,
+        "camera_move_type": "pull",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "gently",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v2_diverse_pool_1773224546",
+      "system_prompt_version": "v2_diverse",
+      "scene_type": "pool",
+      "scene_description": "Indoor heated pool with glass ceiling",
+      "generated_prompt": "Single continuous shot. Camera gently rises from",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a14619f5-672b-4e05-a4a0-9cf7d0718ca9_0.jpg",
+      "image_task_id": "5b5ed4267894648d2d9b702b47625f27",
+      "video_url": "https://tempfile.aiquickdraw.com/r/8d9d8f43f21f137b0d2c8f4c3cabc2ce_1773224793_f36nfxf6.mp4",
+      "video_task_id": "8d9d8f43f21f137b0d2c8f4c3cabc2ce",
+      "qc_result": {
+        "pass": false,
+        "confidence": 0.9,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "action_loop"
+        ],
+        "minor_issues": [
+          "texture_shimmer"
+        ],
+        "summary": "The clip features a visually stunning luxury pool with excellent lighting and composition, but the obvious looping of the steam and water motion makes it unsuitable for professional marketing use.",
+        "aesthetic_score": 9,
+        "motion_score": 6,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 8,
+        "scene_type_detected": "pool"
+      },
+      "reward": {
+        "total_score": 73.60000000000001,
+        "breakdown": {
+          "qc_score": 64.0,
+          "aesthetic_score": 0.9,
+          "clip_score": 0.9,
+          "motion_score": 0.6,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 7,
+        "has_camera_move": true,
+        "camera_move_type": "rise",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "gently",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v2_diverse_room_1773224815",
+      "system_prompt_version": "v2_diverse",
+      "scene_type": "room",
+      "scene_description": "Suite with panoramic city view at night",
+      "generated_prompt": "Single continuous shot. The camera gently",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1461b8f-7654-4e65-803e-8d6f91178294_0.jpg",
+      "image_task_id": "543a7eba080332280698a85d2332b723",
+      "video_url": "https://tempfile.aiquickdraw.com/r/4c4d977a3d6690fa047766d5a40194bf_1773224921_4gf3fgw9.mp4",
+      "video_task_id": "4c4d977a3d6690fa047766d5a40194bf",
+      "qc_result": {
+        "pass": true,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [],
+        "minor_issues": [
+          "texture_shimmer",
+          "reflection_error"
+        ],
+        "summary": "The video successfully captures a luxurious hotel room with a stunning city view at night, featuring smooth camera motion, though minor texture shimmering and a slight reflection error are present.",
+        "aesthetic_score": 8,
+        "motion_score": 7,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "room"
+      },
+      "reward": {
+        "total_score": 88.00000000000001,
+        "breakdown": {
+          "qc_score": 100.0,
+          "aesthetic_score": 0.8,
+          "clip_score": 0.9,
+          "motion_score": 0.7,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 6,
+        "has_camera_move": false,
+        "camera_move_type": "",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "gently",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v2_diverse_room_1773224957",
+      "system_prompt_version": "v2_diverse",
+      "scene_type": "room",
+      "scene_description": "Tropical villa bedroom with garden view",
+      "generated_prompt": "Single continuous shot. The camera gradually",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1461c67-630a-4bf3-aa68-509b3b5f5229_0.jpg",
+      "image_task_id": "c303db9c36cc25591e400bfc6dfff7be",
+      "video_url": "https://tempfile.aiquickdraw.com/r/09d83074499ba8d1cccb6967bc67ecdc_1773225088_xe10qg4j.mp4",
+      "video_task_id": "09d83074499ba8d1cccb6967bc67ecdc",
+      "qc_result": {
+        "pass": false,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "object_morphing",
+          "structural_collapse"
+        ],
+        "minor_issues": [
+          "texture_shimmer",
+          "speed_inconsistency"
+        ],
+        "summary": "The video presents a beautiful and inviting scene with excellent lighting and composition, creating a strong sense of wanderlust, but it unfortunately fails due to subtle object morphing and structural collapse in the door frame, wardrobe, and bed, along with minor texture shimmering in the foliage.",
+        "aesthetic_score": 8,
+        "motion_score": 6,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "room"
+      },
+      "reward": {
+        "total_score": 57.2,
+        "breakdown": {
+          "qc_score": 28.0,
+          "aesthetic_score": 0.8,
+          "clip_score": 0.9,
+          "motion_score": 0.6,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 6,
+        "has_camera_move": false,
+        "camera_move_type": "",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "gradually",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v2_diverse_lobby_1773225130",
+      "system_prompt_version": "v2_diverse",
+      "scene_type": "lobby",
+      "scene_description": "Modern minimalist hotel lobby",
+      "generated_prompt": "Single continuous shot. Camera gently pans left",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1461d6f-1434-4080-ba95-cf779314b396_0.jpg",
+      "image_task_id": "e483b119017a4e2b051d63bced0c6bd0",
+      "video_url": "https://tempfile.aiquickdraw.com/r/8f56ba4bb8231e0b42356f90f37f880c_1773225270_rkxj0ke5.mp4",
+      "video_task_id": "8f56ba4bb8231e0b42356f90f37f880c",
+      "qc_result": {
+        "pass": false,
+        "confidence": 0.9,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "object_morphing"
+        ],
+        "minor_issues": [
+          "speed_inconsistency",
+          "texture_shimmer"
+        ],
+        "summary": "The video showcases a beautifully composed and lit modern hotel lobby with strong aesthetic appeal, but subtle object morphing in static elements like flowers and the wall art, along with texture shimmering, triggers a critical defect and detracts from motion quality.",
+        "aesthetic_score": 8,
+        "motion_score": 4,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 8,
+        "scene_type_detected": "lobby"
+      },
+      "reward": {
+        "total_score": 60.400000000000006,
+        "breakdown": {
+          "qc_score": 46.0,
+          "aesthetic_score": 0.8,
+          "clip_score": 0.9,
+          "motion_score": 0.4,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 7,
+        "has_camera_move": true,
+        "camera_move_type": "pan left",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "gently",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v2_diverse_spa_1773225301",
+      "system_prompt_version": "v2_diverse",
+      "scene_type": "spa",
+      "scene_description": "Outdoor spa with mountain view",
+      "generated_prompt": "Single continuous shot. Camera gently pulls",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1461e72-de70-47cb-ab14-b3fb5454389d_0.jpg",
+      "image_task_id": "c9027c36660f70f729525e8edc9df82e",
+      "video_url": "https://tempfile.aiquickdraw.com/r/e8aaa814fa0332d485b3f8643e434a77_1773225563_0xz6wiib.mp4",
+      "video_task_id": "e8aaa814fa0332d485b3f8643e434a77",
+      "qc_result": {
+        "pass": false,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [],
+        "minor_issues": [],
+        "summary": "",
+        "aesthetic_score": 5,
+        "motion_score": 3,
+        "prompt_adherence_score": 8,
+        "scroll_stop_score": 5,
+        "scene_type_detected": "other"
+      },
+      "reward": {
+        "total_score": 72.0,
+        "breakdown": {
+          "qc_score": 100.0,
+          "aesthetic_score": 0.5,
+          "clip_score": 0.8,
+          "motion_score": 0.3,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 6,
+        "has_camera_move": true,
+        "camera_move_type": "pull",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "gently",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v2_diverse_restaurant_1773225606",
+      "system_prompt_version": "v2_diverse",
+      "scene_type": "restaurant",
+      "scene_description": "Rooftop restaurant at twilight",
+      "generated_prompt": "Single continuous shot. Camera",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1462046-75fa-4cbe-83bd-3bb01dd7486b_0.jpg",
+      "image_task_id": "1f08124b9da0b800f39dce9a62bf2959",
+      "video_url": "https://tempfile.aiquickdraw.com/r/42b5bc6c58e080fcb764fee0d1933967_1773225793_3xif0h28.mp4",
+      "video_task_id": "42b5bc6c58e080fcb764fee0d1933967",
+      "qc_result": {
+        "pass": false,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "object_morphing",
+          "structural_collapse"
+        ],
+        "minor_issues": [
+          "slight_flicker",
+          "edge_softness",
+          "color_drift",
+          "speed_inconsistency",
+          "texture_shimmer"
+        ],
+        "summary": "The video presents a highly appealing romantic rooftop restaurant scene with a beautiful sunset, but suffers from noticeable object morphing in the string lights, furniture, and distant buildings, leading to an auto-fail.",
+        "aesthetic_score": 7,
+        "motion_score": 5,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 8,
+        "scene_type_detected": "restaurant"
+      },
+      "reward": {
+        "total_score": 42.00000000000001,
+        "breakdown": {
+          "qc_score": 0.0,
+          "aesthetic_score": 0.7,
+          "clip_score": 0.9,
+          "motion_score": 0.5,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 4,
+        "has_camera_move": false,
+        "camera_move_type": "",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": false,
+        "speed_modifier": "",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v2_diverse_exterior_1773225817",
+      "system_prompt_version": "v2_diverse",
+      "scene_type": "exterior",
+      "scene_description": "Hotel facade with fountain at entrance",
+      "generated_prompt": "Single continuous shot. The",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1462194-b4c6-45b4-a339-788b85bbfd28_0.jpg",
+      "image_task_id": "c228290af01fece3d0a5bd81cf2bd8d9",
+      "video_url": "https://tempfile.aiquickdraw.com/r/19809bfec92ac98fe3f2caecfdaf80d4_1773225957_0euws1wk.mp4",
+      "video_task_id": "19809bfec92ac98fe3f2caecfdaf80d4",
+      "qc_result": {
+        "pass": true,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [],
+        "minor_issues": [
+          "speed_inconsistency",
+          "texture_shimmer"
+        ],
+        "summary": "The video presents a highly aesthetic and luxurious hotel entrance with a beautiful fountain and warm lighting, effectively creating a grand and inviting atmosphere, despite minor texture shimmering and subtle camera speed inconsistencies.",
+        "aesthetic_score": 9,
+        "motion_score": 7,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "exterior"
+      },
+      "reward": {
+        "total_score": 90.00000000000001,
+        "breakdown": {
+          "qc_score": 100.0,
+          "aesthetic_score": 0.9,
+          "clip_score": 0.9,
+          "motion_score": 0.7,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 4,
+        "has_camera_move": false,
+        "camera_move_type": "",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": false,
+        "speed_modifier": "",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    },
+    {
+      "sample_id": "v2_diverse_beach_1773226002",
+      "system_prompt_version": "v2_diverse",
+      "scene_type": "beach",
+      "scene_description": "Private beach cabana setup",
+      "generated_prompt": "Single continuous shot. Camera gradually",
+      "image_url": "https://tempfile.aiquickdraw.com/f/a14622a1-5dce-4b44-81b9-d1e885dc4ff2_0.jpg",
+      "image_task_id": "a6e460c7e890006e74df973eb2ab8402",
+      "video_url": "https://tempfile.aiquickdraw.com/r/d76bcb932a15a828de35cdcb6e18a2a4_1773226199_dmnc6n63.mp4",
+      "video_task_id": "d76bcb932a15a828de35cdcb6e18a2a4",
+      "qc_result": {
+        "pass": false,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "action_loop",
+          "object_morphing"
+        ],
+        "minor_issues": [
+          "texture_shimmer"
+        ],
+        "summary": "The video features a stunning aesthetic with excellent composition and lighting, but is critically flawed by noticeable looping in the ocean waves and subtle morphing of the cabana curtains and sand.",
+        "aesthetic_score": 8,
+        "motion_score": 4,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "beach"
+      },
+      "reward": {
+        "total_score": 60.400000000000006,
+        "breakdown": {
+          "qc_score": 46.0,
+          "aesthetic_score": 0.8,
+          "clip_score": 0.9,
+          "motion_score": 0.4,
+          "weights": {
+            "qc": 0.4,
+            "aesthetic": 0.2,
+            "clip": 0.2,
+            "motion": 0.2
+          }
+        }
+      },
+      "features": {
+        "word_count": 5,
+        "has_camera_move": false,
+        "camera_move_type": "",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": false,
+        "stable_element": "",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "gradually",
+        "shot_size": "",
+        "has_human_instruction": false,
+        "sentence_count": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "run_info": {
+    "round": 2,
+    "recovered_from_logs": true,
+    "timestamp": "2026-03-11T13:01:47.181251+00:00",
+    "total_samples": 16,
+    "note": "Process SIGTERM at ~12:00 UTC. 16/20 samples recovered from round2_run.log."
+  },
+  "results": [
+    {
+      "sample_id": "r2_v1_improve_room_1773227164",
+      "scene_desc": "Suite with panoramic city view at night",
+      "system_prompt_version": "v1_improve",
+      "scene_type": "room",
+      "qc_result": {
+        "pass": false,
+        "aesthetic_score": 7,
+        "motion_score": 5,
+        "scroll_stop_score": 7,
+        "auto_fail": [
+          "object_morphing",
+          "structural_collapse"
+        ]
+      },
+      "reward": {
+        "total_score": 40.0
+      }
+    },
+    {
+      "sample_id": "r2_v1_improve_lobby_1773227370",
+      "scene_desc": "Modern minimalist hotel lobby",
+      "system_prompt_version": "v1_improve",
+      "scene_type": "lobby",
+      "qc_result": {
+        "pass": false,
+        "aesthetic_score": 8,
+        "motion_score": 6,
+        "scroll_stop_score": 9,
+        "auto_fail": [
+          "object_morphing",
+          "structural_collapse"
+        ]
+      },
+      "reward": {
+        "total_score": 62.4
+      }
+    },
+    {
+      "sample_id": "r2_v1_improve_bathroom_1773227608",
+      "scene_desc": "Marble bathroom with freestanding tub",
+      "system_prompt_version": "v1_improve",
+      "scene_type": "bathroom",
+      "qc_result": {
+        "pass": false,
+        "aesthetic_score": 7,
+        "motion_score": 4,
+        "scroll_stop_score": 7,
+        "auto_fail": [
+          "object_morphing",
+          "structural_collapse"
+        ]
+      },
+      "reward": {
+        "total_score": 38.0
+      }
+    },
+    {
+      "sample_id": "r2_v1_improve_restaurant_1773227748",
+      "scene_desc": "Rooftop restaurant at twilight",
+      "system_prompt_version": "v1_improve",
+      "scene_type": "restaurant",
+      "qc_result": {
+        "pass": false,
+        "aesthetic_score": 9,
+        "motion_score": 7,
+        "scroll_stop_score": 9,
+        "auto_fail": [
+          "object_morphing"
+        ]
+      },
+      "reward": {
+        "total_score": 61.2
+      }
+    },
+    {
+      "sample_id": "r2_v1_improve_exterior_1773227923",
+      "scene_desc": "Hotel facade with fountain at entrance",
+      "system_prompt_version": "v1_improve",
+      "scene_type": "exterior",
+      "qc_result": {
+        "pass": false,
+        "aesthetic_score": 8,
+        "motion_score": 6,
+        "scroll_stop_score": 5
+      },
+      "reward": {
+        "total_score": 86.0
+      }
+    },
+    {
+      "sample_id": "r2_v1_improve_room_1773228455",
+      "scene_desc": "Suite with panoramic city view at night",
+      "system_prompt_version": "v1_improve",
+      "scene_type": "room",
+      "qc_result": {
+        "pass": false,
+        "aesthetic_score": 8,
+        "motion_score": 4,
+        "scroll_stop_score": 8,
+        "auto_fail": [
+          "action_loop",
+          "sky_anomaly"
+        ]
+      },
+      "reward": {
+        "total_score": 60.4
+      }
+    },
+    {
+      "sample_id": "r2_v1_improve_room_1773228659",
+      "scene_desc": "Suite with panoramic city view at night",
+      "system_prompt_version": "v1_improve",
+      "scene_type": "room",
+      "qc_result": {
+        "pass": true,
+        "aesthetic_score": 8,
+        "motion_score": 7,
+        "scroll_stop_score": 8
+      },
+      "reward": {
+        "total_score": 88.0
+      }
+    },
+    {
+      "sample_id": "r2_v2_diverse_lobby_1773228678",
+      "scene_desc": "Modern minimalist hotel lobby",
+      "system_prompt_version": "v2_diverse",
+      "scene_type": "lobby",
+      "qc_result": {
+        "pass": false,
+        "aesthetic_score": 7,
+        "motion_score": 5,
+        "scroll_stop_score": 8,
+        "auto_fail": [
+          "object_morphing",
+          "structural_collapse"
+        ]
+      },
+      "reward": {
+        "total_score": 51.2
+      }
+    },
+    {
+      "sample_id": "r2_v1_improve_lobby_1773228898",
+      "scene_desc": "Modern minimalist hotel lobby",
+      "system_prompt_version": "v1_improve",
+      "scene_type": "lobby",
+      "qc_result": {
+        "pass": false,
+        "aesthetic_score": 7,
+        "motion_score": 5,
+        "scroll_stop_score": 8,
+        "auto_fail": [
+          "object_morphing",
+          "structural_collapse"
+        ]
+      },
+      "reward": {
+        "total_score": 44.0
+      }
+    },
+    {
+      "sample_id": "r2_v2_diverse_bathroom_1773228948",
+      "scene_desc": "Marble bathroom with freestanding tub",
+      "system_prompt_version": "v2_diverse",
+      "scene_type": "bathroom",
+      "qc_result": {
+        "pass": false,
+        "aesthetic_score": 7,
+        "motion_score": 5,
+        "scroll_stop_score": 8,
+        "auto_fail": [
+          "object_morphing",
+          "structural_collapse"
+        ]
+      },
+      "reward": {
+        "total_score": 44.0
+      }
+    },
+    {
+      "sample_id": "r2_v1_improve_bathroom_1773229139",
+      "scene_desc": "Marble bathroom with freestanding tub",
+      "system_prompt_version": "v1_improve",
+      "scene_type": "bathroom",
+      "qc_result": {
+        "pass": true,
+        "aesthetic_score": 9,
+        "motion_score": 7,
+        "scroll_stop_score": 9
+      },
+      "reward": {
+        "total_score": 90.0
+      }
+    },
+    {
+      "sample_id": "r2_v1_improve_restaurant_1773229321",
+      "scene_desc": "Rooftop restaurant at twilight",
+      "system_prompt_version": "v1_improve",
+      "scene_type": "restaurant",
+      "qc_result": {
+        "pass": false,
+        "aesthetic_score": 8,
+        "motion_score": 6,
+        "scroll_stop_score": 9,
+        "auto_fail": [
+          "object_morphing"
+        ]
+      },
+      "reward": {
+        "total_score": 66.4
+      }
+    },
+    {
+      "sample_id": "r2_v1_improve_exterior_1773229534",
+      "scene_desc": "Hotel facade with fountain at entrance",
+      "system_prompt_version": "v1_improve",
+      "scene_type": "exterior",
+      "qc_result": {
+        "pass": false,
+        "aesthetic_score": 7,
+        "motion_score": 5,
+        "scroll_stop_score": 8,
+        "auto_fail": [
+          "object_morphing"
+        ]
+      },
+      "reward": {
+        "total_score": 69.6
+      }
+    },
+    {
+      "sample_id": "r2_v1_improve_beach_1773229804",
+      "scene_desc": "Private beach cabana setup",
+      "system_prompt_version": "v1_improve",
+      "scene_type": "beach",
+      "qc_result": {
+        "pass": false,
+        "aesthetic_score": 9,
+        "motion_score": 6,
+        "scroll_stop_score": 9,
+        "auto_fail": [
+          "action_loop"
+        ]
+      },
+      "reward": {
+        "total_score": 75.6
+      }
+    },
+    {
+      "sample_id": "r2_v2_diverse_room_1773229948",
+      "scene_desc": "Suite with panoramic city view at night",
+      "system_prompt_version": "v2_diverse",
+      "scene_type": "room",
+      "qc_result": {
+        "pass": false,
+        "aesthetic_score": 8,
+        "motion_score": 5,
+        "scroll_stop_score": 5,
+        "auto_fail": [
+          "object_morphing"
+        ]
+      },
+      "reward": {
+        "total_score": 57.2
+      }
+    },
+    {
+      "sample_id": "r2_v2_diverse_lobby_1773230124",
+      "scene_desc": "Modern minimalist hotel lobby",
+      "system_prompt_version": "v2_diverse",
+      "scene_type": "lobby",
+      "qc_result": {
+        "pass": false,
+        "aesthetic_score": 8,
+        "motion_score": 5,
+        "scroll_stop_score": 8,
+        "auto_fail": [
+          "object_morphing"
+        ]
+      },
+      "reward": {
+        "total_score": 71.6
+      }
+    }
+  ]
+}

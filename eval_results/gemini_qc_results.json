@@ -1,0 +1,90 @@
+{
+  "pool": {
+    "qc": {
+      "pass": true,
+      "confidence": 1.0,
+      "human_present": false,
+      "auto_fail_triggered": [],
+      "minor_issues": [
+        "texture_shimmer"
+      ],
+      "summary": "This clip features excellent composition and lighting, capturing a luxurious resort pool at golden hour with smooth camera motion, though very subtle texture shimmer is present in the foliage.",
+      "aesthetic_score": 9,
+      "motion_score": 9,
+      "prompt_adherence_score": 10,
+      "scene_type_detected": "pool"
+    },
+    "reward": 100.0,
+    "reward_breakdown": {
+      "pass_score": 100.0,
+      "issue_penalty": -3.0,
+      "confidence_boost": 10.0
+    }
+  },
+  "room": {
+    "qc": {
+      "pass": true,
+      "confidence": 0.0,
+      "human_present": false,
+      "auto_fail_triggered": [],
+      "minor_issues": [],
+      "summary": "QC error (safe pass): No JSON found: {\n    \"pass\": false,\n    \"confidence\": 0.9,\n    \"aesthetic_score\": 5,\n    \"motion_sco",
+      "aesthetic_score": 5,
+      "motion_score": 5,
+      "prompt_adherence_score": 5,
+      "scene_type_detected": "other"
+    },
+    "reward": 100.0,
+    "reward_breakdown": {
+      "pass_score": 100.0,
+      "issue_penalty": -0.0,
+      "confidence_boost": 0.0
+    }
+  },
+  "lobby": {
+    "qc": {
+      "pass": false,
+      "confidence": 0.9,
+      "human_present": false,
+      "auto_fail_triggered": [
+        "object_morphing"
+      ],
+      "minor_issues": [
+        "speed_inconsistency",
+        "texture_shimmer",
+        "reflection_error"
+      ],
+      "summary": "The video successfully captures a luxurious hotel lobby with a slow pan, but it is marred by significant object morphing in the chandelier crystals and floor reflections, making it unsuitable for professional marketing.",
+      "aesthetic_score": 4,
+      "motion_score": 5,
+      "prompt_adherence_score": 8,
+      "scene_type_detected": "lobby"
+    },
+    "reward": 28.0,
+    "reward_breakdown": {
+      "pass_score": 40.0,
+      "issue_penalty": -17.0,
+      "confidence_boost": 5.0
+    }
+  },
+  "spa": {
+    "qc": {
+      "pass": true,
+      "confidence": 0.0,
+      "human_present": false,
+      "auto_fail_triggered": [],
+      "minor_issues": [],
+      "summary": "QC error (safe pass): 404 Client Error: Not Found for url: https://tempfile.aiquickdraw.com/r/e5e63852ad6b970b932c00593efd",
+      "aesthetic_score": 5,
+      "motion_score": 5,
+      "prompt_adherence_score": 5,
+      "scene_type_detected": "other"
+    },
+    "reward": 100.0,
+    "reward_breakdown": {
+      "pass_score": 100.0,
+      "issue_penalty": -0.0,
+      "confidence_boost": 0.0
+    }
+  }
+}

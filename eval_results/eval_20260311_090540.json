@@ -1,0 +1,165 @@
+{
+  "run_info": {
+    "timestamp": "2026-03-11T09:05:40.207707+00:00",
+    "model": "Seedance 1.5 Pro",
+    "api": "kie.ai",
+    "scenes_evaluated": 4,
+    "api_calls_used": 8
+  },
+  "summary": {
+    "total": 4,
+    "success": 4,
+    "failed": 0,
+    "avg_reward": 100.0
+  },
+  "results": [
+    {
+      "sample_id": "eval_0001",
+      "scene_type": "pool",
+      "generated_prompt": "Single continuous shot. Wide shot of the pool area. The camera pushes slowly forward. Water ripples softly in the warm light. Sky and clouds remain completely still. The pool edge stays anchored in frame.",
+      "video_url": "https://tempfile.aiquickdraw.com/r/69175be0e417887827bf9d94c14e0a18_1773219364_q06htd16.mp4",
+      "img_task_id": "dcc1102702bfed1a17b3b5ee7e8e8cfe",
+      "vid_task_id": "69175be0e417887827bf9d94c14e0a18",
+      "reward": {
+        "total_score": 100.0,
+        "breakdown": {
+          "pass_score": 100.0,
+          "issue_penalty": -0.0,
+          "confidence_boost": 0.0
+        }
+      },
+      "qc_result": {
+        "pass": true,
+        "confidence": 0.5
+      },
+      "features": {
+        "word_count": 34,
+        "has_camera_move": true,
+        "camera_move_type": "push",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": true,
+        "has_stable_element": true,
+        "stable_element": "The pool edge",
+        "motion_elements": [
+          "Water ripples softly"
+        ],
+        "has_speed_modifier": true,
+        "speed_modifier": "slowly",
+        "shot_size": "wide shot",
+        "has_human_instruction": false,
+        "sentence_count": 6
+      },
+      "error": ""
+    },
+    {
+      "sample_id": "eval_0002",
+      "scene_type": "room",
+      "generated_prompt": "Single continuous shot. Medium shot of the hotel room. The camera pushes slowly forward toward the window. Curtains sway gently. The bed frame stays fixed in place.",
+      "video_url": "https://tempfile.aiquickdraw.com/r/28a604c61a33411e316526eeb38d5365_1773219522_n4i6zrkl.mp4",
+      "img_task_id": "4e6e752dc8fe59565f9304477081ebac",
+      "vid_task_id": "28a604c61a33411e316526eeb38d5365",
+      "reward": {
+        "total_score": 100.0,
+        "breakdown": {
+          "pass_score": 100.0,
+          "issue_penalty": -0.0,
+          "confidence_boost": 0.0
+        }
+      },
+      "qc_result": {
+        "pass": true,
+        "confidence": 0.5
+      },
+      "features": {
+        "word_count": 27,
+        "has_camera_move": true,
+        "camera_move_type": "push",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": true,
+        "stable_element": "The bed frame",
+        "motion_elements": [
+          "Curtains sway gently"
+        ],
+        "has_speed_modifier": true,
+        "speed_modifier": "slowly",
+        "shot_size": "medium shot",
+        "has_human_instruction": false,
+        "sentence_count": 5
+      },
+      "error": ""
+    },
+    {
+      "sample_id": "eval_0003",
+      "scene_type": "lobby",
+      "generated_prompt": "Single continuous shot. Wide shot of the hotel lobby. The camera pushes slowly forward across the marble floor. The chandelier stays anchored above. Reflections on the floor remain steady.",
+      "video_url": "https://tempfile.aiquickdraw.com/r/568e737ef9d6213d1ceb874f648f1601_1773219707_cmtob1ze.mp4",
+      "img_task_id": "e8bcd7f116247f259c67bd63cce2d1f2",
+      "vid_task_id": "568e737ef9d6213d1ceb874f648f1601",
+      "reward": {
+        "total_score": 100.0,
+        "breakdown": {
+          "pass_score": 100.0,
+          "issue_penalty": -0.0,
+          "confidence_boost": 0.0
+        }
+      },
+      "qc_result": {
+        "pass": true,
+        "confidence": 0.5
+      },
+      "features": {
+        "word_count": 29,
+        "has_camera_move": true,
+        "camera_move_type": "push",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": true,
+        "stable_element": "The chandelier",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "slowly",
+        "shot_size": "wide shot",
+        "has_human_instruction": false,
+        "sentence_count": 5
+      },
+      "error": ""
+    },
+    {
+      "sample_id": "eval_0004",
+      "scene_type": "spa",
+      "generated_prompt": "Single continuous shot. Medium shot of the spa room. The camera pushes slowly forward. Candle flames flicker gently. Stone walls stay perfectly still.",
+      "video_url": "https://tempfile.aiquickdraw.com/r/e5e63852ad6b970b932c00593efdc391_1773219905_1yo5qqd5.mp4",
+      "img_task_id": "086d0e83af7b53d23f1705d91e3c1bfc",
+      "vid_task_id": "e5e63852ad6b970b932c00593efdc391",
+      "reward": {
+        "total_score": 100.0,
+        "breakdown": {
+          "pass_score": 100.0,
+          "issue_penalty": -0.0,
+          "confidence_boost": 0.0
+        }
+      },
+      "qc_result": {
+        "pass": true,
+        "confidence": 0.5
+      },
+      "features": {
+        "word_count": 23,
+        "has_camera_move": true,
+        "camera_move_type": "push",
+        "has_single_continuous_shot": true,
+        "has_sky_freeze": false,
+        "has_stable_element": true,
+        "stable_element": "Stone walls",
+        "motion_elements": [],
+        "has_speed_modifier": true,
+        "speed_modifier": "slowly",
+        "shot_size": "medium shot",
+        "has_human_instruction": false,
+        "sentence_count": 5
+      },
+      "error": ""
+    }
+  ]
+}

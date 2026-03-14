@@ -1,0 +1,229 @@
+2026-03-11 11:06:04,297 [INFO] Loaded 2 improved system prompts: ['v1_improved_20260311_105049', 'v2_diverse_improved_20260311_105049']
+2026-03-11 11:06:04,297 [INFO] ======================================================================
+2026-03-11 11:06:04,297 [INFO] ROUND 2: IMPROVED PROMPTS — 2026-03-11T11:06:04.297341+00:00
+2026-03-11 11:06:04,297 [INFO] ======================================================================
+2026-03-11 11:06:04,600 [INFO] 
+==================================================
+2026-03-11 11:06:04,601 [INFO] SYSTEM PROMPT: v1_improved_20260311_105049
+2026-03-11 11:06:04,601 [INFO] ==================================================
+2026-03-11 11:06:04,601 [INFO] 
+--- r2_v1_improve_room_1773227164 | Suite with panoramic city view at night ---
+2026-03-11 11:06:06,242 [INFO] Prompt: Single continuous shot. Camera gently pans across
+2026-03-11 11:06:06,571 [INFO] Created task 5cae78f5311ea4a893487d0f5256e63f (model=seedream/4.5-text-to-image)
+2026-03-11 11:06:33,110 [INFO] Created task bd3eb923441d4d706b26c407d3537264 (model=seedance-1.5-pro)
+2026-03-11 11:09:08,651 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/bd3eb923441d4d706b26c407d3537264_1773227330_g
+2026-03-11 11:09:09,887 [INFO] Uploading video to Gemini File API...
+2026-03-11 11:09:15,992 [INFO] Running Gemini QC evaluation...
+2026-03-11 11:09:28,574 [INFO] QC: pass=False, aesthetic=7, motion=5, scroll_stop=7
+2026-03-11 11:09:28,575 [INFO]   Auto-fail: ['object_morphing', 'structural_collapse']
+2026-03-11 11:09:28,575 [INFO] Reward: 40.0/100
+2026-03-11 11:09:30,575 [INFO] 
+--- r2_v1_improve_lobby_1773227370 | Modern minimalist hotel lobby ---
+2026-03-11 11:09:31,953 [INFO] Prompt: Single continuous shot. Camera
+2026-03-11 11:09:32,274 [INFO] Created task 7d3a074896738a00a23baafa6a4415ea (model=seedream/4.5-text-to-image)
+2026-03-11 11:10:37,321 [INFO] Created task 5ec4db6edbaa517055153c39f27ef708 (model=seedance-1.5-pro)
+2026-03-11 11:13:12,968 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/5ec4db6edbaa517055153c39f27ef708_1773227572_5
+2026-03-11 11:13:13,687 [INFO] Uploading video to Gemini File API...
+2026-03-11 11:13:17,435 [INFO] Running Gemini QC evaluation...
+2026-03-11 11:13:26,105 [INFO] QC: pass=False, aesthetic=8, motion=6, scroll_stop=9
+2026-03-11 11:13:26,105 [INFO]   Auto-fail: ['object_morphing', 'structural_collapse']
+2026-03-11 11:13:26,105 [INFO] Reward: 62.4/100
+2026-03-11 11:13:28,105 [INFO] 
+--- r2_v1_improve_bathroom_1773227608 | Marble bathroom with freestanding tub ---
+2026-03-11 11:13:29,555 [INFO] Prompt: Single continuous shot. Camera gently
+2026-03-11 11:13:29,904 [INFO] Created task 2f8a230c3a823cce1057b824cb79b808 (model=seedream/4.5-text-to-image)
+2026-03-11 11:13:56,138 [INFO] Created task f133d8fae648b77e970829d08cb9e39c (model=seedance-1.5-pro)
+2026-03-11 11:15:31,659 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/f133d8fae648b77e970829d08cb9e39c_1773227724_1
+2026-03-11 11:15:32,299 [INFO] Uploading video to Gemini File API...
+2026-03-11 11:15:35,730 [INFO] Running Gemini QC evaluation...
+2026-03-11 11:15:46,285 [INFO] QC: pass=False, aesthetic=7, motion=4, scroll_stop=7
+2026-03-11 11:15:46,286 [INFO]   Auto-fail: ['object_morphing', 'structural_collapse']
+2026-03-11 11:15:46,286 [INFO] Reward: 38.0/100
+2026-03-11 11:15:48,286 [INFO] 
+--- r2_v1_improve_restaurant_1773227748 | Rooftop restaurant at twilight ---
+2026-03-11 11:15:49,779 [INFO] Prompt: Single continuous shot. Camera
+2026-03-11 11:15:50,240 [INFO] Created task 553691eb5b78aba9f71415d1851c8324 (model=seedream/4.5-text-to-image)
+2026-03-11 11:16:16,913 [INFO] Created task 9efa9ef39989d22307bcee4c7922c1ae (model=seedance-1.5-pro)
+2026-03-11 11:18:22,705 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/9efa9ef39989d22307bcee4c7922c1ae_1773227885_a
+2026-03-11 11:18:23,477 [INFO] Uploading video to Gemini File API...
+2026-03-11 11:18:29,651 [INFO] Running Gemini QC evaluation...
+2026-03-11 11:18:41,427 [INFO] QC: pass=False, aesthetic=9, motion=7, scroll_stop=9
+2026-03-11 11:18:41,427 [INFO]   Auto-fail: ['object_morphing']
+2026-03-11 11:18:41,427 [INFO] Reward: 61.2/100
+2026-03-11 11:18:43,427 [INFO] 
+--- r2_v1_improve_exterior_1773227923 | Hotel facade with fountain at entrance ---
+2026-03-11 11:18:44,839 [INFO] Prompt: Single continuous shot. Camera
+2026-03-11 11:18:45,442 [INFO] Created task 64f8df6f2c3e11146c09fdc71f90a0d2 (model=seedream/4.5-text-to-image)
+2026-03-11 11:19:28,030 [INFO] Created task 14e061899f2015d5e9e5ba5e45ba0acc (model=seedance-1.5-pro)
+2026-03-11 11:21:02,523 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/14e061899f2015d5e9e5ba5e45ba0acc_1773228040_x
+2026-03-11 11:21:03,508 [INFO] Uploading video to Gemini File API...
+2026-03-11 11:21:07,124 [INFO] Running Gemini QC evaluation...
+2026-03-11 11:21:21,112 [INFO] QC: pass=False, aesthetic=8, motion=6, scroll_stop=5
+2026-03-11 11:21:21,113 [INFO] Reward: 86.0/100
+2026-03-11 11:21:23,113 [INFO] 
+--- r2_v1_improve_beach_1773228083 | Private beach cabana setup ---
+2026-03-11 11:21:24,574 [INFO] Prompt: Single continuous shot. Camera
+2026-03-11 11:21:25,097 [INFO] Created task 57522680f783cd8b14c9f5b9024a22ed (model=seedream/4.5-text-to-image)
+2026-03-11 11:25:32,524 [INFO] Created task 7ee125ae9116d243a567d668cbbe9680 (model=seedance-1.5-pro)
+2026-03-11 11:27:15,070 [INFO] Loaded 2 improved system prompts: ['v1_improved_20260311_105049', 'v2_diverse_improved_20260311_105049']
+2026-03-11 11:27:15,070 [INFO] ======================================================================
+2026-03-11 11:27:15,070 [INFO] ROUND 2: IMPROVED PROMPTS — 2026-03-11T11:27:15.070600+00:00
+2026-03-11 11:27:15,070 [INFO] ======================================================================
+2026-03-11 11:27:15,372 [INFO] 
+==================================================
+2026-03-11 11:27:15,373 [INFO] SYSTEM PROMPT: v1_improved_20260311_105049
+2026-03-11 11:27:15,373 [INFO] ==================================================
+2026-03-11 11:27:15,373 [INFO] 
+--- r2_v1_improve_room_1773228435 | Suite with panoramic city view at night ---
+2026-03-11 11:27:17,593 [INFO] Prompt: Single continuous shot. Camera gently pans
+2026-03-11 11:27:18,040 [INFO] Created task 352be5178281054798fb1d9ea2b05c11 (model=seedream/4.5-text-to-image)
+2026-03-11 11:27:35,182 [INFO] Loaded 2 improved system prompts: ['v1_improved_20260311_105049', 'v2_diverse_improved_20260311_105049']
+2026-03-11 11:27:35,182 [INFO] ======================================================================
+2026-03-11 11:27:35,182 [INFO] ROUND 2: IMPROVED PROMPTS — 2026-03-11T11:27:35.182570+00:00
+2026-03-11 11:27:35,182 [INFO] ======================================================================
+2026-03-11 11:27:35,484 [INFO] 
+==================================================
+2026-03-11 11:27:35,484 [INFO] SYSTEM PROMPT: v1_improved_20260311_105049
+2026-03-11 11:27:35,484 [INFO] ==================================================
+2026-03-11 11:27:35,484 [INFO] 
+--- r2_v1_improve_room_1773228455 | Suite with panoramic city view at night ---
+2026-03-11 11:27:37,383 [INFO] Prompt: Single continuous shot. Camera **g
+2026-03-11 11:27:37,595 [INFO] Created task bffd72dcc20531b48cd613710101d8cf (model=seedream/4.5-text-to-image)
+2026-03-11 11:27:38,808 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/7ee125ae9116d243a567d668cbbe9680_1773228436_b
+2026-03-11 11:27:39,496 [INFO] Uploading video to Gemini File API...
+2026-03-11 11:27:45,620 [INFO] Running Gemini QC evaluation...
+2026-03-11 11:27:55,897 [INFO] QC: pass=False, aesthetic=8, motion=4, scroll_stop=8
+2026-03-11 11:27:55,898 [INFO]   Auto-fail: ['action_loop', 'sky_anomaly']
+2026-03-11 11:27:55,898 [INFO] Reward: 60.4/100
+2026-03-11 11:27:57,898 [INFO] 
+==================================================
+2026-03-11 11:27:57,898 [INFO] SYSTEM PROMPT: v2_diverse_improved_20260311_105049
+2026-03-11 11:27:57,898 [INFO] ==================================================
+2026-03-11 11:27:57,898 [INFO] 
+--- r2_v2_diverse_room_1773228477 | Suite with panoramic city view at night ---
+2026-03-11 11:27:59,238 [INFO] Prompt: Single continuous shot. Camera gently pans
+2026-03-11 11:27:59,736 [INFO] Created task de9ce4e6aa35e3a148582371f979ada3 (model=seedream/4.5-text-to-image)
+2026-03-11 11:28:26,183 [INFO] Created task de63f30a340020a104d901331750a7f7 (model=seedance-1.5-pro)
+2026-03-11 11:30:59,305 [INFO] Loaded 2 improved system prompts: ['v1_improved_20260311_105049', 'v2_diverse_improved_20260311_105049']
+2026-03-11 11:30:59,305 [INFO] ======================================================================
+2026-03-11 11:30:59,305 [INFO] ROUND 2: IMPROVED PROMPTS — 2026-03-11T11:30:59.305582+00:00
+2026-03-11 11:30:59,305 [INFO] ======================================================================
+2026-03-11 11:30:59,612 [INFO] 
+==================================================
+2026-03-11 11:30:59,612 [INFO] SYSTEM PROMPT: v1_improved_20260311_105049
+2026-03-11 11:30:59,612 [INFO] ==================================================
+2026-03-11 11:30:59,612 [INFO] 
+--- r2_v1_improve_room_1773228659 | Suite with panoramic city view at night ---
+2026-03-11 11:31:01,349 [INFO] Prompt: Single continuous shot. Camera gently pans across
+2026-03-11 11:31:01,946 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/de63f30a340020a104d901331750a7f7_1773228639_y
+2026-03-11 11:31:01,979 [INFO] Created task 12f099590638c79627c34a95e9830cf8 (model=seedream/4.5-text-to-image)
+2026-03-11 11:31:02,817 [INFO] Uploading video to Gemini File API...
+2026-03-11 11:31:06,730 [INFO] Running Gemini QC evaluation...
+2026-03-11 11:31:16,765 [INFO] QC: pass=True, aesthetic=8, motion=7, scroll_stop=8
+2026-03-11 11:31:16,765 [INFO] Reward: 88.0/100
+2026-03-11 11:31:18,766 [INFO] 
+--- r2_v2_diverse_lobby_1773228678 | Modern minimalist hotel lobby ---
+2026-03-11 11:31:20,079 [INFO] Prompt: Single continuous shot. Camera
+2026-03-11 11:31:20,304 [INFO] Created task 5cca126248897d24717f93d576cd4dc5 (model=seedream/4.5-text-to-image)
+2026-03-11 11:33:07,638 [INFO] Created task a0ffec85164bd8a7be4bfe868b49e785 (model=seedance-1.5-pro)
+2026-03-11 11:33:26,105 [INFO] Created task 8ecce20af164d2a0d997417e29729a33 (model=seedance-1.5-pro)
+2026-03-11 11:34:42,219 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/a0ffec85164bd8a7be4bfe868b49e785_1773228870_m
+2026-03-11 11:34:42,885 [INFO] Uploading video to Gemini File API...
+2026-03-11 11:34:46,920 [INFO] Running Gemini QC evaluation...
+2026-03-11 11:34:56,902 [INFO] QC: pass=False, aesthetic=7, motion=5, scroll_stop=8
+2026-03-11 11:34:56,902 [INFO]   Auto-fail: ['object_morphing', 'structural_collapse']
+2026-03-11 11:34:56,902 [INFO] Reward: 51.2/100
+2026-03-11 11:34:58,903 [INFO] 
+--- r2_v1_improve_lobby_1773228898 | Modern minimalist hotel lobby ---
+2026-03-11 11:35:00,194 [INFO] Prompt: Single continuous shot. Camera
+2026-03-11 11:35:00,702 [INFO] Created task b142a01d8131bd94cb3bf36771cb63e3 (model=seedream/4.5-text-to-image)
+2026-03-11 11:35:31,422 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/8ecce20af164d2a0d997417e29729a33_1773228909_o
+2026-03-11 11:35:32,530 [INFO] Uploading video to Gemini File API...
+2026-03-11 11:35:36,029 [INFO] Running Gemini QC evaluation...
+2026-03-11 11:35:46,978 [INFO] QC: pass=False, aesthetic=7, motion=5, scroll_stop=8
+2026-03-11 11:35:46,979 [INFO]   Auto-fail: ['object_morphing', 'structural_collapse']
+2026-03-11 11:35:46,979 [INFO] Reward: 44.0/100
+2026-03-11 11:35:48,979 [INFO] 
+--- r2_v2_diverse_bathroom_1773228948 | Marble bathroom with freestanding tub ---
+2026-03-11 11:35:50,256 [INFO] Prompt: Single continuous shot. Camera gently circles
+2026-03-11 11:35:50,792 [INFO] Created task df6a2e625c24fc307912a03ae5345c14 (model=seedream/4.5-text-to-image)
+2026-03-11 11:36:05,612 [INFO] Created task 7910aae67a8d3ac8c27aa8c16732d1d6 (model=seedance-1.5-pro)
+2026-03-11 11:38:41,568 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/7910aae67a8d3ac8c27aa8c16732d1d6_1773229094_y
+2026-03-11 11:38:42,884 [INFO] Uploading video to Gemini File API...
+2026-03-11 11:38:46,523 [INFO] Running Gemini QC evaluation...
+2026-03-11 11:38:57,454 [INFO] QC: pass=False, aesthetic=7, motion=5, scroll_stop=8
+2026-03-11 11:38:57,454 [INFO]   Auto-fail: ['object_morphing', 'structural_collapse']
+2026-03-11 11:38:57,454 [INFO] Reward: 44.0/100
+2026-03-11 11:38:59,454 [INFO] 
+--- r2_v1_improve_bathroom_1773229139 | Marble bathroom with freestanding tub ---
+2026-03-11 11:39:00,875 [INFO] Prompt: Single continuous shot. Camera **
+2026-03-11 11:39:01,239 [INFO] Created task edd03e867884f27371ccf4d059642c3c (model=seedream/4.5-text-to-image)
+2026-03-11 11:40:06,381 [INFO] Created task 6166bddaed73c7f6aae6cd74c3056c95 (model=seedance-1.5-pro)
+2026-03-11 11:41:42,245 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/6166bddaed73c7f6aae6cd74c3056c95_1773229278_v
+2026-03-11 11:41:42,983 [INFO] Uploading video to Gemini File API...
+2026-03-11 11:41:48,897 [INFO] Running Gemini QC evaluation...
+2026-03-11 11:41:59,032 [INFO] QC: pass=True, aesthetic=9, motion=7, scroll_stop=9
+2026-03-11 11:41:59,032 [INFO] Reward: 90.0/100
+2026-03-11 11:42:01,033 [INFO] 
+--- r2_v1_improve_restaurant_1773229321 | Rooftop restaurant at twilight ---
+2026-03-11 11:42:02,407 [INFO] Prompt: Single continuous shot. Camera gently tracks
+2026-03-11 11:42:02,833 [INFO] Created task 3e5224cdc168d9c5bc4c1e522b3c8c65 (model=seedream/4.5-text-to-image)
+2026-03-11 11:43:08,139 [INFO] Created task 44ab4388a329f95bb18c26237c7d5010 (model=seedance-1.5-pro)
+2026-03-11 11:45:14,130 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/44ab4388a329f95bb18c26237c7d5010_1773229508_u
+2026-03-11 11:45:15,286 [INFO] Uploading video to Gemini File API...
+2026-03-11 11:45:20,968 [INFO] Running Gemini QC evaluation...
+2026-03-11 11:45:32,236 [INFO] QC: pass=False, aesthetic=8, motion=6, scroll_stop=9
+2026-03-11 11:45:32,237 [INFO]   Auto-fail: ['object_morphing']
+2026-03-11 11:45:32,237 [INFO] Reward: 66.4/100
+2026-03-11 11:45:34,237 [INFO] 
+--- r2_v1_improve_exterior_1773229534 | Hotel facade with fountain at entrance ---
+2026-03-11 11:45:35,772 [INFO] Prompt: Single continuous shot. Camera gently
+2026-03-11 11:45:36,289 [INFO] Created task 2735b5ecbff07a7d01589fc790fb9fbe (model=seedream/4.5-text-to-image)
+2026-03-11 11:47:12,273 [INFO] Created task bc0908e0c893354008910e98b0874402 (model=seedance-1.5-pro)
+2026-03-11 11:49:48,086 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/bc0908e0c893354008910e98b0874402_1773229763_f
+2026-03-11 11:49:49,334 [INFO] Uploading video to Gemini File API...
+2026-03-11 11:49:52,675 [INFO] Running Gemini QC evaluation...
+2026-03-11 11:50:02,957 [INFO] QC: pass=False, aesthetic=7, motion=5, scroll_stop=8
+2026-03-11 11:50:02,958 [INFO]   Auto-fail: ['object_morphing']
+2026-03-11 11:50:02,958 [INFO] Reward: 69.6/100
+2026-03-11 11:50:04,958 [INFO] 
+--- r2_v1_improve_beach_1773229804 | Private beach cabana setup ---
+2026-03-11 11:50:06,659 [INFO] Prompt: Single continuous shot. Camera gently
+2026-03-11 11:50:06,882 [INFO] Created task f7970233b1036495049e490d286f3312 (model=seedream/4.5-text-to-image)
+2026-03-11 11:50:33,470 [INFO] Created task 7b949e9fa5f9dbc23665ad9c94352052 (model=seedance-1.5-pro)
+2026-03-11 11:52:09,410 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/7b949e9fa5f9dbc23665ad9c94352052_1773229924_w
+2026-03-11 11:52:10,098 [INFO] Uploading video to Gemini File API...
+2026-03-11 11:52:16,500 [INFO] Running Gemini QC evaluation...
+2026-03-11 11:52:26,764 [INFO] QC: pass=False, aesthetic=9, motion=6, scroll_stop=9
+2026-03-11 11:52:26,765 [INFO]   Auto-fail: ['action_loop']
+2026-03-11 11:52:26,765 [INFO] Reward: 75.6/100
+2026-03-11 11:52:28,765 [INFO] 
+==================================================
+2026-03-11 11:52:28,765 [INFO] SYSTEM PROMPT: v2_diverse_improved_20260311_105049
+2026-03-11 11:52:28,765 [INFO] ==================================================
+2026-03-11 11:52:28,765 [INFO] 
+--- r2_v2_diverse_room_1773229948 | Suite with panoramic city view at night ---
+2026-03-11 11:52:30,131 [INFO] Prompt: Single continuous shot. Camera gently
+2026-03-11 11:52:30,628 [INFO] Created task b8cc22f54bda1490ef4905d737793794 (model=seedream/4.5-text-to-image)
+2026-03-11 11:52:57,746 [INFO] Created task 2e0fe63d13190154f767c933357acc1c (model=seedance-1.5-pro)
+2026-03-11 11:55:03,671 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/2e0fe63d13190154f767c933357acc1c_1773230098_4
+2026-03-11 11:55:04,881 [INFO] Uploading video to Gemini File API...
+2026-03-11 11:55:10,560 [INFO] Running Gemini QC evaluation...
+2026-03-11 11:55:22,794 [INFO] QC: pass=False, aesthetic=8, motion=5, scroll_stop=5
+2026-03-11 11:55:22,794 [INFO]   Auto-fail: ['object_morphing']
+2026-03-11 11:55:22,794 [INFO] Reward: 57.2/100
+2026-03-11 11:55:24,794 [INFO] 
+--- r2_v2_diverse_lobby_1773230124 | Modern minimalist hotel lobby ---
+2026-03-11 11:55:26,119 [INFO] Prompt: Single continuous shot. Camera
+2026-03-11 11:55:26,646 [INFO] Created task 1cba6cdb3514011c33db7e0b8ce227c3 (model=seedream/4.5-text-to-image)
+2026-03-11 11:58:03,297 [INFO] Created task feebcc0a43ca4115762239ef05114efa (model=seedance-1.5-pro)
+2026-03-11 11:59:38,541 [INFO] Downloading video for QC: https://tempfile.aiquickdraw.com/r/feebcc0a43ca4115762239ef05114efa_1773230365_k
+2026-03-11 11:59:39,440 [INFO] Uploading video to Gemini File API...
+2026-03-11 11:59:42,919 [INFO] Running Gemini QC evaluation...
+2026-03-11 11:59:52,870 [INFO] QC: pass=False, aesthetic=8, motion=5, scroll_stop=8
+2026-03-11 11:59:52,871 [INFO]   Auto-fail: ['object_morphing']
+2026-03-11 11:59:52,871 [INFO] Reward: 71.6/100
+2026-03-11 11:59:54,871 [INFO] 
+--- r2_v2_diverse_bathroom_1773230394 | Marble bathroom with freestanding tub ---
+2026-03-11 11:59:56,360 [INFO] Prompt: Single continuous shot. Camera gently pulls back
+2026-03-11 11:59:56,818 [INFO] Created task c9014777bf5635cb761f8fc80fcdf40c (model=seedream/4.5-text-to-image)

@@ -1,0 +1,104 @@
+{
+  "test": "v3_vs_v1_comparison",
+  "timestamp": "2026-03-12T04:16:27.314833+00:00",
+  "elapsed_sec": 768.9539458751678,
+  "summary": {
+    "v1_avg_reward": 72.4,
+    "v3_avg_reward": 62.40000000000001,
+    "delta": -9.999999999999993,
+    "v1_count": 2,
+    "v3_count": 1
+  },
+  "results": [
+    {
+      "scene": "pool",
+      "version": "v1",
+      "prompt": "Single continuous shot. Wide shot of the infinity pool at golden hour. The camera pushes slowly forward along the pool edge. Water ripples softly in warm light. Sky and clouds remain completely still.",
+      "word_count": 33,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1479575-1acc-45fa-9f61-b612c6adc230_0.jpg",
+      "video_url": "https://tempfile.aiquickdraw.com/h/0d3eb6ab35827be5900820ef443c6ad8_1773288587.mp4",
+      "qc": {
+        "pass": false,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "action_loop"
+        ],
+        "minor_issues": [],
+        "summary": "The video presents a stunning sunset infinity pool scene with excellent composition and color, but is unfortunately auto-failed by an obvious and distracting temporal loop in the pool water and ocean waves.",
+        "aesthetic_score": 7,
+        "motion_score": 4,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 8,
+        "scene_type_detected": "pool"
+      },
+      "reward": 74.8,
+      "error": "",
+      "video_cost_ms": 304
+    },
+    {
+      "scene": "pool",
+      "version": "v3",
+      "prompt": "Luxury infinity pool merges with golden ocean horizon, palm fronds casting warm shadows on turquoise water, light ripples dancing across the surface. Camera slowly pushes forward along the pool edge.",
+      "word_count": 30,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1479575-1acc-45fa-9f61-b612c6adc230_0.jpg",
+      "video_url": "https://tempfile.aiquickdraw.com/r/ef16625d611595de32cc5718a7ba407c_1773288769_dytjbo8b.mp4",
+      "qc": {
+        "pass": false,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "action_loop"
+        ],
+        "minor_issues": [
+          "speed_inconsistency",
+          "texture_shimmer"
+        ],
+        "summary": "The video presents a visually stunning sunset infinity pool scene with excellent composition and color, but the repetitive and unnatural motion of the water in both the pool and ocean triggers an auto-fail.",
+        "aesthetic_score": 8,
+        "motion_score": 4,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 8,
+        "scene_type_detected": "pool"
+      },
+      "reward": 62.40000000000001,
+      "error": "",
+      "video_cost_ms": 160
+    },
+    {
+      "scene": "room",
+      "version": "v1",
+      "prompt": "Single continuous shot. Medium shot of the penthouse bedroom. The camera pushes slowly forward toward the window. Silk curtains sway gently in the breeze. The bed frame stays firmly anchored in place.",
+      "word_count": 32,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1479902-2754-4eb0-b7c1-f098c66b1d46_0.jpg",
+      "video_url": "https://tempfile.aiquickdraw.com/r/107bc1b12754a042c99cc19cb7cb6150_1773288958_ipwg1unh.mp4",
+      "qc": {
+        "pass": true,
+        "confidence": 0.0,
+        "human_present": false,
+        "auto_fail_triggered": [],
+        "minor_issues": [],
+        "summary": "QC error (safe pass): HTTPSConnectionPool(host='tempfile.aiquickdraw.com', port=443): Max retries exceeded with url: /r/10",
+        "aesthetic_score": 5,
+        "motion_score": 5,
+        "prompt_adherence_score": 5,
+        "scroll_stop_score": 5,
+        "scene_type_detected": "other"
+      },
+      "reward": 70.0,
+      "error": "",
+      "video_cost_ms": 103
+    },
+    {
+      "scene": "room",
+      "version": "v3",
+      "prompt": "Sunlit penthouse bedroom with silk curtains gently swaying, warm morning light streaming through floor-to-ceiling windows revealing a vast ocean below. Camera gradually pulls back from the window.",
+      "word_count": 27,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1479902-2754-4eb0-b7c1-f098c66b1d46_0.jpg",
+      "video_url": "",
+      "qc": {},
+      "reward": 0.0,
+      "error": "Video error: Connection error: [Errno 111] Connection refused"
+    }
+  ]
+}

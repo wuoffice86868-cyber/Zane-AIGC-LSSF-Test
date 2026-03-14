@@ -1,0 +1,73 @@
+[
+  {
+    "pass": true,
+    "confidence": 1.0,
+    "human_present": false,
+    "auto_fail_triggered": [],
+    "minor_issues": [
+      "speed_inconsistency"
+    ],
+    "summary": "The video presents a beautiful, well-composed tropical pool scene with excellent sunset lighting and natural water movement, though the camera pan exhibits a minor speed inconsistency.",
+    "aesthetic_score": 8,
+    "motion_score": 7,
+    "prompt_adherence_score": 9,
+    "scene_type_detected": "pool",
+    "sample_id": "eval_0001",
+    "scene_type": "pool",
+    "prompt_used": "Single continuous shot. Wide shot of the pool area. The camera pushes slowly forward. Water ripples softly in the warm light. Sky and clouds remain completely still. The pool edge stays anchored in frame."
+  },
+  {
+    "pass": true,
+    "confidence": 1.0,
+    "human_present": false,
+    "auto_fail_triggered": [],
+    "minor_issues": [
+      "color_drift",
+      "speed_inconsistency",
+      "texture_shimmer"
+    ],
+    "summary": "This clip features a luxurious hotel room with a stunning city view at dusk, showcasing excellent composition and lighting, though minor color shifts and texture shimmer are present.",
+    "aesthetic_score": 8,
+    "motion_score": 7,
+    "prompt_adherence_score": 9,
+    "scene_type_detected": "room",
+    "sample_id": "eval_0002",
+    "scene_type": "room",
+    "prompt_used": "Single continuous shot. Medium shot of the hotel room. The camera pushes slowly forward toward the window. Curtains sway gently. The bed frame stays fixed in place."
+  },
+  {
+    "pass": false,
+    "confidence": 0.9,
+    "human_present": false,
+    "auto_fail_triggered": [
+      "object_morphing",
+      "structural_collapse"
+    ],
+    "minor_issues": [
+      "texture_shimmer"
+    ],
+    "summary": "The video successfully depicts a luxurious hotel lobby with a smooth camera zoom, but it is marred by subtle object morphing in the chandelier and flowers, along with minor structural instability in the archways and pillars.",
+    "aesthetic_score": 5,
+    "motion_score": 5,
+    "prompt_adherence_score": 9,
+    "scene_type_detected": "lobby",
+    "sample_id": "eval_0003",
+    "scene_type": "lobby",
+    "prompt_used": "Single continuous shot. Wide shot of the hotel lobby. The camera pushes slowly forward across the marble floor. The chandelier stays anchored above. Reflections on the floor remain steady."
+  },
+  {
+    "pass": true,
+    "confidence": 0.0,
+    "human_present": false,
+    "auto_fail_triggered": [],
+    "minor_issues": [],
+    "summary": "QC error (safe pass): 404 Client Error: Not Found for url: https://tempfile.aiquickdraw.com/r/e5e63852ad6b970b932c00593efd",
+    "aesthetic_score": 5,
+    "motion_score": 5,
+    "prompt_adherence_score": 5,
+    "scene_type_detected": "other",
+    "sample_id": "eval_0004",
+    "scene_type": "spa",
+    "prompt_used": "Single continuous shot. Medium shot of the spa room. The camera pushes slowly forward. Candle flames flicker gently. Stone walls stay perfectly still."
+  }
+]

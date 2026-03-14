@@ -1,0 +1,338 @@
+{
+  "test": "v3_vs_v1_clean",
+  "timestamp": "2026-03-12T10:42:19.646351+00:00",
+  "elapsed_sec": 2303.3331665992737,
+  "qc_model": "gemini-2.5-pro",
+  "video_model": "seedance-1.5-pro",
+  "resolution": "1080p",
+  "aspect_ratio": "9:16",
+  "summary": {
+    "v1_avg": 75.66666666666667,
+    "v3_avg": 86.53333333333335,
+    "delta": 10.866666666666674,
+    "v1_pass_rate": "2/6",
+    "v3_pass_rate": "4/6",
+    "v1_aesthetic_avg": 8.5,
+    "v3_aesthetic_avg": 8.833333333333334
+  },
+  "results": [
+    {
+      "scene": "pool",
+      "version": "v1",
+      "prompt": "Single continuous shot. Wide shot of the infinity pool at golden hour. The camera pushes slowly forward along the pool edge. Water ripples softly in warm light. Sky and clouds remain completely still.",
+      "word_count": 33,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a148164f-a500-4aab-8509-95a383352feb_0.jpg",
+      "video_url": "https://tempfile.aiquickdraw.com/r/601e55dfbe941f0a9618f99725a88015_1773309970_zelxlpz3.mp4",
+      "qc": {
+        "pass": true,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [],
+        "minor_issues": [
+          "edge_softness"
+        ],
+        "summary": "An aesthetically stunning and technically sound clip with a perfect luxury vibe, with motion and composition that are nearly flawless for marketing.",
+        "aesthetic_score": 9,
+        "motion_score": 9,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "pool"
+      },
+      "reward": 94.00000000000001,
+      "error": "",
+      "video_cost_ms": 103
+    },
+    {
+      "scene": "pool",
+      "version": "v3",
+      "prompt": "Luxury infinity pool merges with golden ocean horizon, palm fronds casting warm shadows on turquoise water, light ripples dancing across the surface. Camera slowly pushes forward along the pool edge.",
+      "word_count": 30,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a148164f-a500-4aab-8509-95a383352feb_0.jpg",
+      "video_url": "https://tempfile.aiquickdraw.com/r/f1e7f20fce25c0e900264df2494ec09c_1773310129_55tn5nvu.mp4",
+      "qc": {
+        "pass": true,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [],
+        "minor_issues": [],
+        "summary": "An aesthetically stunning and technically flawless clip with a smooth, cinematic camera motion that perfectly captures a luxurious sunset vibe.",
+        "aesthetic_score": 9,
+        "motion_score": 9,
+        "prompt_adherence_score": 10,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "pool"
+      },
+      "reward": 96.00000000000001,
+      "error": "",
+      "video_cost_ms": 109
+    },
+    {
+      "scene": "room",
+      "version": "v1",
+      "prompt": "Single continuous shot. Medium shot of the penthouse bedroom. The camera pushes slowly forward toward the window. Silk curtains sway gently in the breeze. The bed frame stays firmly anchored in place.",
+      "word_count": 32,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1481850-ab13-4189-bca4-c4589064f617_0.jpg",
+      "video_url": "https://tempfile.aiquickdraw.com/r/cb48cd6ea0b0230313b69fa1a1d5f577_1773310435_ytf3go40.mp4",
+      "qc": {
+        "pass": false,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "structural_collapse"
+        ],
+        "minor_issues": [
+          "texture_shimmer"
+        ],
+        "summary": "The video has a stunning aesthetic and scroll-stopping potential, but fails due to the subtle but definite warping of the window frame.",
+        "aesthetic_score": 8,
+        "motion_score": 4,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "room"
+      },
+      "reward": 69.6,
+      "error": "",
+      "video_cost_ms": 104
+    },
+    {
+      "scene": "room",
+      "version": "v3",
+      "prompt": "Sunlit penthouse bedroom with silk curtains gently swaying, warm morning light streaming through floor-to-ceiling windows revealing a vast ocean below. Camera gradually pulls back from the window.",
+      "word_count": 27,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1481850-ab13-4189-bca4-c4589064f617_0.jpg",
+      "video_url": "https://tempfile.aiquickdraw.com/r/ffc42f1cef84daf9230679c71a75d5b7_1773310579_eilm528s.mp4",
+      "qc": {
+        "pass": false,
+        "confidence": 0.95,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "object_morphing"
+        ],
+        "minor_issues": [],
+        "summary": "The video has stunning aesthetics and a perfect camera move, but fails due to subtle yet noticeable morphing of the bed and pillows.",
+        "aesthetic_score": 9,
+        "motion_score": 6,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "room"
+      },
+      "reward": 82.80000000000001,
+      "error": "",
+      "video_cost_ms": 98
+    },
+    {
+      "scene": "lobby",
+      "version": "v1",
+      "prompt": "Single continuous shot. Wide shot of the grand hotel lobby. The camera pushes slowly forward across the marble floor. The chandelier stays anchored above. Reflections on the floor remain steady.",
+      "word_count": 30,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1481b0f-7964-48d6-ad8f-f2f122081fe5_0.jpg",
+      "video_url": "https://tempfile.aiquickdraw.com/r/82044ef818d0a694472bf57c85fbb62a_1773310829_f4m327lf.mp4",
+      "qc": {
+        "pass": false,
+        "confidence": 0.95,
+        "human_present": true,
+        "auto_fail_triggered": [
+          "object_morphing",
+          "structural_collapse"
+        ],
+        "minor_issues": [
+          "texture_shimmer",
+          "reflection_error"
+        ],
+        "summary": "The video has a stunning luxury aesthetic and composition, but fails due to subtle yet critical warping of architectural elements and objects.",
+        "aesthetic_score": 8,
+        "motion_score": 3,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 8,
+        "scene_type_detected": "lobby"
+      },
+      "reward": 51.2,
+      "error": "",
+      "video_cost_ms": 170
+    },
+    {
+      "scene": "lobby",
+      "version": "v3",
+      "prompt": "Grand hotel lobby with polished marble floors reflecting warm amber sconces, a single orchid arrangement at the reception desk, soft shadows pooling in the archways. Camera smoothly pans left across the space.",
+      "word_count": 32,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1481b0f-7964-48d6-ad8f-f2f122081fe5_0.jpg",
+      "video_url": "https://tempfile.aiquickdraw.com/r/cac84df945ab910f5122fee2c1ee2d07_1773311036_aekh632e.mp4",
+      "qc": {
+        "pass": true,
+        "confidence": 0.95,
+        "human_present": true,
+        "auto_fail_triggered": [],
+        "minor_issues": [
+          "reflection_error",
+          "texture_shimmer"
+        ],
+        "summary": "",
+        "aesthetic_score": 9,
+        "motion_score": 8,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "other"
+      },
+      "reward": 92.00000000000001,
+      "error": "",
+      "video_cost_ms": 161
+    },
+    {
+      "scene": "spa",
+      "version": "v1",
+      "prompt": "Single continuous shot. Medium shot of the volcanic stone bath. The camera pushes slowly forward. Thin steam rises gently above the rocks. Stone walls stay perfectly still.",
+      "word_count": 27,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1481dd8-8da8-4f50-9916-ffc59e80dcd9_0.jpg",
+      "video_url": "https://tempfile.aiquickdraw.com/r/22875b6d805a8d9b3c1db45e417c088d_1773311223_938l6x01.mp4",
+      "qc": {
+        "pass": true,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [],
+        "minor_issues": [],
+        "summary": "A beautifully composed and lit scene with excellent, natural motion that perfectly captures a tranquil spa vibe, making it highly effective for marketing.",
+        "aesthetic_score": 9,
+        "motion_score": 9,
+        "prompt_adherence_score": 10,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "spa"
+      },
+      "reward": 96.00000000000001,
+      "error": "",
+      "video_cost_ms": 89
+    },
+    {
+      "scene": "spa",
+      "version": "v3",
+      "prompt": "Secluded stone bath nestled among lush tropical ferns, thin steam rising slowly above dark volcanic rocks, golden afternoon light filtering through a bamboo canopy. Camera gently pushes forward toward the water.",
+      "word_count": 31,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1481dd8-8da8-4f50-9916-ffc59e80dcd9_0.jpg",
+      "video_url": "https://tempfile.aiquickdraw.com/r/e952531fb0e650d1f5abe5be8770a8df_1773311362_5t2w28l7.mp4",
+      "qc": {
+        "pass": true,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [],
+        "minor_issues": [],
+        "summary": "An aesthetically beautiful and technically flawless clip with excellent lighting and smooth motion that perfectly captures a serene spa vibe.",
+        "aesthetic_score": 9,
+        "motion_score": 9,
+        "prompt_adherence_score": 10,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "spa"
+      },
+      "reward": 96.00000000000001,
+      "error": "",
+      "video_cost_ms": 104
+    },
+    {
+      "scene": "restaurant",
+      "version": "v1",
+      "prompt": "Single continuous shot. Medium shot of the terrace restaurant at dusk. The camera moves slowly left along the tables. Candle flames flicker gently. The railing stays fixed in frame.",
+      "word_count": 29,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1481fb2-9d45-4f62-ac2b-6e4dadc86d53_0.jpg",
+      "video_url": "https://tempfile.aiquickdraw.com/r/73a9834c8da9a008a6d58ef5c3d7f126_1773311526_lzoj6f1d.mp4",
+      "qc": {
+        "pass": false,
+        "confidence": 0.95,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "object_morphing"
+        ],
+        "minor_issues": [
+          "texture_shimmer"
+        ],
+        "summary": "The video has a stunning aesthetic and romantic mood, but fails due to subtle morphing of the glassware and cutlery on the tables.",
+        "aesthetic_score": 9,
+        "motion_score": 6,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "restaurant"
+      },
+      "reward": 75.6,
+      "error": "",
+      "video_cost_ms": 88
+    },
+    {
+      "scene": "restaurant",
+      "version": "v3",
+      "prompt": "Open-air terrace restaurant at dusk, candle flames softly flickering on linen tablecloths, deep purple sky above a calm sea, warm lamplight glowing along the balcony railing. Camera slowly drifts left.",
+      "word_count": 30,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a1481fb2-9d45-4f62-ac2b-6e4dadc86d53_0.jpg",
+      "video_url": "https://tempfile.aiquickdraw.com/r/017e6ea9d5a7702414abd3a3cdc7c403_1773311730_d83n3fir.mp4",
+      "qc": {
+        "pass": false,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "structural_collapse",
+          "object_morphing"
+        ],
+        "minor_issues": [
+          "depth_inconsistency"
+        ],
+        "summary": "The video has a stunning aesthetic and scroll-stopping power, but it fails due to severe structural warping in the railing and morphing of the chairs and tables.",
+        "aesthetic_score": 8,
+        "motion_score": 3,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "restaurant"
+      },
+      "reward": 58.400000000000006,
+      "error": "",
+      "video_cost_ms": 165
+    },
+    {
+      "scene": "beach",
+      "version": "v1",
+      "prompt": "Single continuous shot. Wide shot of the beach cabana. The camera rises slowly. Sheer fabric panels sway gently in the breeze. Sky and clouds remain completely still.",
+      "word_count": 27,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a14821de-6dbc-402a-a9d6-1b80a60e0b6e_0.jpg",
+      "video_url": "https://tempfile.aiquickdraw.com/r/37d7a41cca7830cb88f5bc7808629e56_1773311914_ctuf6876.mp4",
+      "qc": {
+        "pass": false,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [
+          "object_morphing",
+          "structural_collapse"
+        ],
+        "minor_issues": [],
+        "summary": "The video has a stunning aesthetic and scroll-stopping power, but fails due to the unstable and morphing wooden cabana structures.",
+        "aesthetic_score": 8,
+        "motion_score": 4,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "beach"
+      },
+      "reward": 67.60000000000002,
+      "error": "",
+      "video_cost_ms": 114
+    },
+    {
+      "scene": "beach",
+      "version": "v3",
+      "prompt": "Pristine white sand beach with a draped cabana, sheer fabric panels swaying in a sea breeze, golden sunset light painting long shadows across undisturbed sand. Camera gradually rises above the shoreline.",
+      "word_count": 31,
+      "image_url": "https://tempfile.aiquickdraw.com/f/a14821de-6dbc-402a-a9d6-1b80a60e0b6e_0.jpg",
+      "video_url": "https://tempfile.aiquickdraw.com/r/b9f1cc17ea6519bac6e0ea309a2c4281_1773312079_teo689rz.mp4",
+      "qc": {
+        "pass": true,
+        "confidence": 1.0,
+        "human_present": false,
+        "auto_fail_triggered": [],
+        "minor_issues": [],
+        "summary": "The video is aesthetically beautiful and technically flawless, with a smooth cinematic camera motion and a strong, relaxing vibe that makes it perfect for luxury marketing.",
+        "aesthetic_score": 9,
+        "motion_score": 9,
+        "prompt_adherence_score": 9,
+        "scroll_stop_score": 9,
+        "scene_type_detected": "beach"
+      },
+      "reward": 94.00000000000001,
+      "error": "",
+      "video_cost_ms": 124
+    }
+  ],
+  "errors": []
+}
