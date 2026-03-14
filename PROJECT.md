@@ -1,7 +1,7 @@
 # Prompt Evaluation & Optimization System
 
 > Source of truth for the project. Updated as we progress.
-> Last updated: 2026-03-12
+> Last updated: 2026-03-14
 
 ---
 
@@ -228,14 +228,19 @@ Round 2 (OPRO-improved prompts): avg reward = 62.9 (WORSE by -7.9)
 
 | Method | Details |
 |--------|---------|
-| **Current: Gemini QC** | Custom prompt → Gemini 2.5 Pro (multimodal). 10 auto-fail rules, 7 minor issues, 4-axis scoring. **Limitation**: scoring criteria hand-written, not benchmarked; inter-run consistency unvalidated; general-purpose VLM, not video-quality-specialized. |
-| **[VideoScore2](https://huggingface.co/spaces/TIGER-Lab/VideoScore2)** | TIGER-AI-Lab, 2025. Fine-tuned on Qwen2-VL, trained on 27,168 human-annotated videos. 3 dimensions: visual quality, text alignment, physical/common-sense consistency. Chain-of-thought explanations. SOTA on 4 out-of-domain benchmarks. Available as HF Space (no GPU needed for us). |
+| **Current: Gemini QC** | Custom prompt → Gemini 2.5 Pro (multimodal). Auto-Fail (任一即失败): 人脸变形(五官错位) / 手指错误(6根、融合) / 循环artifact / 穿透问题 — 一眼能看出AI生成的. Minor Issues: 累计≥2则Fail (轻微闪烁, 颜色不一致, 边缘细节丢失) — 单独一个可接受, 累积起来观感变差. **Limitation**: scoring criteria hand-written, not benchmarked; inter-run consistency unvalidated; general-purpose VLM, not video-quality-specialized. |
+| **[VideoScore](https://github.com/TIGER-AI-Lab/VideoScore)** | TIGER-AI-Lab, EMNLP 2024. 专为AI视频评测训练, 5维度与人工判断相关性77%. 相比通用VLM, 它见过大量AI视频典型瑕疵, 识别更准确. VideoScore2 (2025) is the follow-up with chain-of-thought explanations, available as HF Space. |
 | **[VBench 2.0](https://vchitect.github.io/VBench-project/)** | CVPR 2025. Standard benchmark suite: Human Fidelity, Controllability, Creativity, Physics, Aesthetics. Good for standardized reference, but it's a benchmark not an evaluator — need to implement each dimension's computation. |
 
+**Improvement directions**:
+- 专业模型: VideoScore/VideoScore2 补充 Gemini (验证专业模型效果)
+- 自训练: 用运行pipeline积累的QC Structured Data训练Reward Model, 针对酒店场景定制/场景区分. 比如"水面循环"在泳池是大问题(视觉焦点).
+- 目标 QC Accuracy > 85%
+
 **Plan**:
-- Short-term: Gemini QC + consistency check (same video 3× take median)
-- Mid-term: Integrate VideoScore2 HF Space as complement/replacement
-- Long-term: Align scoring dimensions with VBench 2.0 standards
+- Short-term: Gemini QC + VideoScore2 补充 (验证专业模型效果) + consistency check
+- Mid-term: 积累足够数据后训练 Reward Model (定制化场景判断)
+- Long-term: Align scoring dimensions with VBench 2.0 standards (Human Fidelity / Physics / Commonsense)
 
 ---
 
@@ -262,9 +267,17 @@ Positive feedback cycle: more generation = more data = better model = better gen
 
 Causal chain: No evaluation system → No Reward Signal → No RLHF/DPO → Model can't evolve.
 
-What we're doing now (structured prompt / auto QC / data formatting) is ALL preparation for this closed loop. Surface-level it's "make prompts better", but the chain involves multiple models: MLM for scene analysis, VLM for QC, Seedance for generation. **Prompt optimization is the short-term play; long-term is using Reward signals to drive model evolution itself.**
+What we're doing now (structured prompt / auto QC / data formatting) is ALL preparation for this closed loop. Surface-level it's "make prompts better", but the chain involves multiple models: MLM for scene analysis, VLM for QC, Seedance for generation. **Prompt optimization is the short-term play; long-term is using Reward signals to drive model evolution itself. 评测系统的终极价值是产出能驱动模型进化的数据。**
 
-### 5.4 Validation Case: T2V-Turbo-v2
+### 5.4 Three Concrete Directions
+
+| Direction | Details |
+|-----------|---------|
+| **方向1: QC数据训练 Reward Model** | 参考 VideoScore 架构 + VBench-2.0 评估维度, 训练酒店场景专用视频评分模型 |
+| **方向2: Reward信号优化生成模型** | 参考 T2V-Turbo-v2 做法, 用 RLHF/DPO 让模型学会"生成高分视频" (长期目标, 需要数据量和计算资源) |
+| **方向3: Fine-tune Prompt Generator** | 参考 VPO 方法, 用 QC 高分视频对应的 Prompt 微调 Prompt 生成模块 (更轻量, 更快见效) |
+
+### 5.5 Validation Case: T2V-Turbo-v2
 
 [T2V-Turbo-v2](https://t2v-turbo-v2.github.io/) (2024) proves the closed-loop approach works: VBench 85.13, beat Gen-3/Kling (academic reward-based methods beating industry products).
 
@@ -276,6 +289,15 @@ What we're doing now (structured prompt / auto QC / data formatting) is ALL prep
 Multi-reward signal combination outperforms single signal. 4-step generation quality beats 50-step. Inference 12.5× faster.
 
 **Takeaway**: Reward signal DESIGN matters more than raw training data. 10× more data might only improve 10%, but a well-designed reward signal can improve 50%.
+
+### 5.6 T2V-Turbo-v2 vs Our Approach
+
+| Dimension | T2V-Turbo-v2 | Our Plan |
+|-----------|--------------|----------|
+| **Reward Model** | Generic (CLIPScore, PickScore, HPSv2) | 自训练, 场景定制 (如"泳池水面循环"这种瑕疵通用模型识别不出) |
+| **Training Data** | Public datasets (量大但不垂直) | 自己积累的 (video, prompt, qc_result) (量小但高度垂直) |
+| **Optimization Target** | Generic quality (好看、清晰、流畅) | 生服特定指标 (真实感、静态稳定性、品牌调性) |
+| **Evaluation Benchmark** | VBench 16 dimensions | 自定义维度; 可参考 VBench-2.0 新增 Human Fidelity / Physics 维度 |
 
 ---
 
@@ -324,7 +346,17 @@ Average reward dropped from 70.8 → 62.9. Constraint-based optimization made th
 
 ---
 
-## 7. Phases & Roadmap
+## 7. Leo's Status Assessment (from his doc)
+
+| Status | Content |
+|--------|---------|
+| **已完成** | 结构化Prompt: 五段式模板稳定运行, 每天生成的视频都用统一结构. QC评分模块: Gemini 2.5 Pro 自动评分上线, Auto-Fail + Minor Issues 分层逻辑就绪. Pipeline集成: QC结果自动写入Lark Base, Dashboard可查询, 数据持续积累. |
+| **进行中** | 数据积累: 每天随生产自然积累QC数据, 目前已有数百条记录. 人工校准: 开始人工审核一批QC结果, 建立Ground Truth. |
+| **下一步** | 1. 人工标注校准: 选取100-200条样本, 人工判定Pass/Fail, 和Gemini对比验证Accuracy (目标>85%), 同时识别Gemini系统性偏差, 这批标注也是Reward Model种子数据. 2. DSPy集成: 把Prompt生成模块用DSPy重写, 定义模块签名和评估函数, 接入QC数据, 让框架自动搜索最优结构. 3. Reward Model训练 (数据量依赖). |
+
+---
+
+## 8. Phases & Roadmap
 
 ### Phase 1: Evaluation Infrastructure (Current)
 - [x] Structured prompt template (5-section)
@@ -359,7 +391,7 @@ Average reward dropped from 70.8 → 62.9. Constraint-based optimization made th
 
 ---
 
-## 8. Infrastructure Notes
+## 9. Infrastructure Notes
 
 Leo's existing infrastructure (structured prompt, Gemini QC → Lark Base pipeline integration) is on his other computer. We'll rebuild as needed here since Zane is more in-sync with current code state. The main goal is integration into the whole pipeline at the end.
 
@@ -378,7 +410,7 @@ Leo's existing infrastructure (structured prompt, Gemini QC → Lark Base pipeli
 
 ---
 
-## 9. Key References
+## 10. Key References
 
 - [OPRO — Large Language Models as Optimizers](https://github.com/google-deepmind/opro) (DeepMind, ICLR 2024)
 - [DSPy — Programming with Foundation Models](https://github.com/stanfordnlp/dspy) (Stanford, 2024-2025)
