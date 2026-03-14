@@ -37,6 +37,20 @@ class CameraMove(str, Enum):
     TILT_UP = "tilt up"
 
 
+class RewardDimension(str, Enum):
+    """Three reward dimensions aligned with Seedance internal RM architecture.
+
+    Seedance 1.0 tech report (arXiv:2506.09113) discloses 3 specialized
+    Reward Models used in their RLHF pipeline:
+    - Foundational RM: text-video alignment + structural stability
+    - Motion RM: movement quality + temporal consistency + artifact detection
+    - Aesthetic RM: visual appeal (evaluated on keyframes, image-space)
+    """
+    FOUNDATIONAL = "foundational"
+    MOTION = "motion"
+    AESTHETIC = "aesthetic"
+
+
 # ---------------------------------------------------------------------------
 # Core data models
 # ---------------------------------------------------------------------------
@@ -105,11 +119,27 @@ class EvalSample(BaseModel):
 # Result / report models
 # ---------------------------------------------------------------------------
 
+class DimensionScore(BaseModel):
+    """Score for a single reward dimension."""
+
+    dimension: str = ""
+    score: float = Field(ge=0.0, le=1.0, default=0.0)
+    weight: float = Field(ge=0.0, le=1.0, default=0.0)
+    weighted_score: float = Field(ge=0.0, le=1.0, default=0.0)
+    components: Dict[str, float] = Field(default_factory=dict)
+    issues: List[str] = Field(default_factory=list)
+
+
 class RewardBreakdown(BaseModel):
-    """Detailed reward score breakdown."""
+    """Detailed reward score breakdown.
+
+    Supports both legacy single-score mode and the new 3-dimension mode
+    aligned with Seedance's internal RM architecture.
+    """
 
     total_score: float = Field(ge=0, le=100, default=0.0)
     breakdown: Dict[str, object] = Field(default_factory=dict)
+    dimensions: Dict[str, DimensionScore] = Field(default_factory=dict)
 
 
 class PromptFeatures(BaseModel):

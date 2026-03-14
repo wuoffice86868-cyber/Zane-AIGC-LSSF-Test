@@ -49,9 +49,15 @@ from .models import (
 from .kie_client import KieClient, TaskResult
 from .prompt_analyzer import PromptAnalyzer
 from .reward_calculator import RewardCalculator
-from .optimizer import PromptOptimizer, LLMClient
 
-# DSPy optimizer (preferred when available)
+# LLM client protocol (previously from optimizer.py)
+from typing import Protocol
+
+class LLMClient(Protocol):
+    """Minimal interface for an LLM text-generation client."""
+    def generate(self, prompt: str, **kwargs: Any) -> str: ...  # pragma: no cover
+
+# DSPy optimizer (preferred)
 try:
     from .dspy_optimizer import (
         VideoPromptOptimizer,
@@ -257,13 +263,6 @@ class EvalPipeline:
         self.reward_calc = reward_calculator or RewardCalculator()
         self.analyzer = prompt_analyzer or PromptAnalyzer()
 
-        # OPRO optimizer (legacy fallback)
-        self.opro_optimizer = PromptOptimizer(
-            llm_client=llm_client,
-            reward_calculator=self.reward_calc,
-            prompt_analyzer=self.analyzer,
-        )
-
         # DSPy optimizer (preferred)
         self.dspy_optimizer: Optional[Any] = None
         self._use_dspy = use_dspy and HAS_DSPY and VideoPromptOptimizer is not None
@@ -450,92 +449,73 @@ class EvalPipeline:
     def optimize(
         self,
         batch: BatchResult,
-        *,
-        top_k: int = 5,
-        bottom_k: int = 3,
     ) -> str:
-        """Generate optimization suggestions based on batch results.
+        """Generate an improved system prompt based on batch results.
 
-        Uses DSPy optimizer (critique → evidence-based template improvement)
-        when available. Falls back to OPRO meta-prompt approach otherwise.
+        Uses DSPy optimizer: critique each result → extract patterns →
+        evidence-based template improvement.
 
         Args:
             batch: Completed batch evaluation result.
-            top_k: Number of top-scoring samples for meta-prompt.
-            bottom_k: Number of bottom-scoring samples for meta-prompt.
 
         Returns:
-            Improved system prompt string.
+            Improved system prompt string, or current prompt if
+            optimization fails or no DSPy available.
         """
-        samples = batch.to_eval_samples()
+        if not self._use_dspy or self.dspy_optimizer is None:
+            logger.warning("No DSPy optimizer available. Returning current prompt.")
+            return self.system_prompt
 
-        # --- DSPy path: critique each result, then improve template ---
-        if self._use_dspy and self.dspy_optimizer is not None:
-            logger.info("Running DSPy-based optimization (%d samples)", len(batch.results))
-            try:
-                # Collect examples with critiques
-                examples: List[Dict[str, Any]] = []
-                for r in batch.results:
-                    if not r.success or not r.qc_result or not r.reward:
-                        continue
+        logger.info("Running DSPy-based optimization (%d samples)", len(batch.results))
+        try:
+            examples: List[Dict[str, Any]] = []
+            for r in batch.results:
+                if not r.success or not r.qc_result or not r.reward:
+                    continue
 
-                    qc_dict = r.qc_result.model_dump(by_alias=True)
+                qc_dict = r.qc_result.model_dump(by_alias=True)
 
-                    # Build SceneInput from our SceneSpec data
-                    scene_input = SceneInput(
-                        scene_description=r.scene_description,
-                        main_subject=r.scene_description.split(" with ")[0] if " with " in r.scene_description else r.scene_description,
-                    )
-
-                    # Get critique from DSPy
-                    critique = self.dspy_optimizer.critique_result(
-                        prompt=r.generated_prompt,
-                        scene=scene_input,
-                        qc_result=qc_dict,
-                    )
-                    logger.info(
-                        "  Critique for %s (reward=%.1f): %s",
-                        r.scene_type, r.reward.total_score, critique[:100],
-                    )
-
-                    examples.append({
-                        "prompt": r.generated_prompt,
-                        "scene": scene_input,
-                        "qc_result": qc_dict,
-                        "reward": r.reward.total_score,
-                        "critique": critique,
-                    })
-
-                if not examples:
-                    logger.warning("No successful results to optimize from")
-                    return self.system_prompt
-
-                # Improve template based on accumulated evidence
-                improved = self.dspy_optimizer.improve_template(examples)
-                logger.info(
-                    "DSPy template improvement complete (%d chars → %d chars)",
-                    len(self.system_prompt), len(improved),
+                scene_input = SceneInput(
+                    scene_description=r.scene_description,
+                    main_subject=(
+                        r.scene_description.split(" with ")[0]
+                        if " with " in r.scene_description
+                        else r.scene_description
+                    ),
                 )
-                return improved
 
-            except Exception as e:
-                logger.error("DSPy optimization failed, falling back to OPRO: %s", e)
+                critique = self.dspy_optimizer.critique_result(
+                    prompt=r.generated_prompt,
+                    scene=scene_input,
+                    qc_result=qc_dict,
+                )
+                logger.info(
+                    "  Critique for %s (reward=%.1f): %s",
+                    r.scene_type, r.reward.total_score, critique[:100],
+                )
 
-        # --- OPRO fallback ---
-        if self.llm:
-            return self.opro_optimizer.suggest_improvement(
-                self.system_prompt,
-                samples,
-                top_k=top_k,
-                bottom_k=bottom_k,
+                examples.append({
+                    "prompt": r.generated_prompt,
+                    "scene": scene_input,
+                    "qc_result": qc_dict,
+                    "reward": r.reward.total_score,
+                    "critique": critique,
+                })
+
+            if not examples:
+                logger.warning("No successful results to optimize from")
+                return self.system_prompt
+
+            improved = self.dspy_optimizer.improve_template(examples)
+            logger.info(
+                "DSPy template improvement complete (%d chars → %d chars)",
+                len(self.system_prompt), len(improved),
             )
+            return improved
 
-        return self.opro_optimizer.build_meta_prompt(
-            self.system_prompt,
-            samples,
-            top_k=top_k,
-            bottom_k=bottom_k,
-        )
+        except Exception as e:
+            logger.error("DSPy optimization failed: %s", e)
+            return self.system_prompt
 
     # ------------------------------------------------------------------
     # Report generation

@@ -296,19 +296,18 @@ class TestGenerateReport:
 # ---------------------------------------------------------------------------
 
 class TestOptimize:
-    def test_optimize_without_llm_returns_meta_prompt(self, mock_kie, system_prompt):
+    def test_optimize_without_dspy_returns_current(self, mock_kie, system_prompt):
+        """Without DSPy, optimize() returns the current prompt unchanged."""
         with patch.object(mock_kie, "generate_image", return_value=_img_result()):
             with patch.object(mock_kie, "generate_video", return_value=_vid_result()):
-                # Force OPRO path by disabling DSPy
                 pipeline = EvalPipeline(system_prompt, mock_kie, use_dspy=False)
                 batch = pipeline.evaluate_batch(
                     [SceneSpec(f"Scene {i}", "pool") for i in range(5)],
                     save=False,
                 )
-                meta = pipeline.optimize(batch)
+                result = pipeline.optimize(batch)
 
-        assert "CURRENT SYSTEM PROMPT" in meta
-        assert "HISTORICAL PROMPT VARIANTS" in meta
+        assert result == system_prompt
 
     def test_optimize_with_dspy_returns_improved_template(self, mock_kie, system_prompt):
         """When DSPy is available, optimize() returns an improved template string."""
@@ -324,24 +323,6 @@ class TestOptimize:
         # DSPy should return a non-empty string (the improved template)
         assert isinstance(result, str)
         assert len(result) > 0
-
-    def test_optimize_with_llm_opro_fallback(self, mock_kie, system_prompt):
-        """When DSPy is disabled but LLM is available, use OPRO path."""
-        llm = MagicMock()
-        llm.generate.return_value = "Improved system prompt here"
-
-        with patch.object(mock_kie, "generate_image", return_value=_img_result()):
-            with patch.object(mock_kie, "generate_video", return_value=_vid_result()):
-                pipeline = EvalPipeline(
-                    system_prompt, mock_kie, llm_client=llm, use_dspy=False,
-                )
-                batch = pipeline.evaluate_batch(
-                    [SceneSpec(f"Scene {i}", "pool") for i in range(5)],
-                    save=False,
-                )
-                improved = pipeline.optimize(batch)
-
-        assert improved == "Improved system prompt here"
 
 
 # ---------------------------------------------------------------------------

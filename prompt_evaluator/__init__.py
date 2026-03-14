@@ -1,9 +1,17 @@
-"""Prompt Evaluator — evaluation and optimization for AI video generation prompts."""
+"""Prompt Evaluator — evaluation and optimization for AI video generation prompts.
+
+Three-dimensional reward model aligned with Seedance RM architecture:
+  - Foundational: structural stability + text-video alignment
+  - Motion: movement quality + temporal consistency
+  - Aesthetic: visual appeal + composition
+"""
 
 from .models import (
     QCResult,
     EvalSample,
     RewardBreakdown,
+    DimensionScore,
+    RewardDimension,
     HumanLabel,
     PromptInfo,
     InputInfo,
@@ -17,7 +25,6 @@ from .models import (
 )
 from .reward_calculator import RewardCalculator
 from .prompt_analyzer import PromptAnalyzer
-from .optimizer import PromptOptimizer
 from .qc_client import QCClientProtocol, StubQCClient, GeminiQCClient
 from .gemini_client import GeminiVideoQC, GeminiLLM, HOTEL_VIDEO_QC_PROMPT
 from .calibration import QCCalibrator
@@ -28,6 +35,8 @@ __all__ = [
     "QCResult",
     "EvalSample",
     "RewardBreakdown",
+    "DimensionScore",
+    "RewardDimension",
     "HumanLabel",
     "PromptInfo",
     "InputInfo",
@@ -40,7 +49,6 @@ __all__ = [
     "CameraMove",
     "RewardCalculator",
     "PromptAnalyzer",
-    "PromptOptimizer",
     "QCCalibrator",
     "KieClient",
     "TaskResult",
@@ -54,4 +62,4 @@ __all__ = [
     "SceneSpec",
 ]
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
