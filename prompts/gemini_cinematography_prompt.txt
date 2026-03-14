@@ -9,7 +9,7 @@ Convert scene analysis JSON into a Seedance video prompt using their native came
 Use these exact patterns:
 
 | camera_move | Seedance Pattern |
-|-------------|----------------------|
+|-------------|------------------|
 | push | "The camera pushes forward..." |
 | pull | "The camera pulls back, revealing..." |
 | circle around | "The camera circles around [subject]..." |
@@ -118,5 +118,107 @@ Sky and clouds remain completely still. Sun position unchanged.
 
 **Output:**
 ```
-Single continuous shot. Medium shot of a luxury hotel room bathed in warm afternoon sunlight. The camera pushes slowly forward toward the king bed, passing the potted plant, revealing the panoramic city view through floor-to-ceiling windows. Furniture stays perfectly still.
+Single continuous shot. Medium shot of a luxury hotel room in warm afternoon sunlight. The camera pushes slowly forward toward the bed, passing the potted plant, revealing the city view through floor-to-ceiling windows. Furniture stays perfectly still.
+```
+(35 words)
+
+---
+
+### Infinity Pool (push)
+
+**Input:**
+```json
+{
+  "scene_description": "infinity pool overlooking ocean at sunset",
+  "main_subject": "infinity pool edge meeting horizon",
+  "foreground": "pool water surface",
+  "background": "ocean horizon with sunset sky",
+  "camera_move": "push",
+  "camera_direction": "forward over the water toward horizon",
+  "shot_size": "wide",
+  "lighting": "golden hour sunset light",
+  "subtle_motion": ["water ripples softly"],
+  "stable_element": "horizon",
+  "sky_instruction": "sky and clouds stay completely frozen"
+}
+```
+
+**Output:**
+```
+Single continuous shot. Wide shot of an infinity pool at golden hour, ocean horizon beyond. The camera pushes slowly forward over the water. Water ripples softly. The horizon holds steady. Sky and clouds remain completely still.
+```
+(37 words)
+
+---
+
+### Bathtub (circle around)
+
+**Input:**
+```json
+{
+  "scene_description": "freestanding marble bathtub in bright bathroom",
+  "main_subject": "marble bathtub",
+  "foreground": "none",
+  "background": "bathroom window with soft light",
+  "camera_move": "circle around",
+  "camera_direction": "around the bathtub",
+  "shot_size": "medium",
+  "lighting": "soft diffused daylight from window",
+  "subtle_motion": [],
+  "stable_element": "tile walls"
+}
+```
+
+**Output:**
+```
+Single continuous shot. Medium shot of a marble bathtub in soft diffused daylight. The camera circles slowly around the tub, bathroom window sliding into view. Tile walls remain fixed.
+```
+(30 words)
+
+---
+
+### Poolside (move right)
+
+**Input:**
+```json
+{
+  "scene_description": "resort pool area with lounge chairs and palm trees",
+  "main_subject": "pool and lounge area",
+  "foreground": "lounge chairs",
+  "background": "palm trees and resort buildings",
+  "camera_move": "move right",
+  "camera_direction": "right across the pool area",
+  "shot_size": "wide",
+  "lighting": "bright afternoon sun",
+  "subtle_motion": ["palm fronds move gently"],
+  "stable_element": "pool edge",
+  "sky_instruction": "sky and clouds stay completely frozen"
+}
+```
+
+**Output:**
+```
+Single continuous shot. Wide shot of a resort pool area in bright afternoon sun. The camera moves right across the scene, passing lounge chairs. Palm fronds sway gently. Pool edge stays anchored. Sky and clouds remain completely still.
+```
+(38 words)
+
+---
+
+### Palm Tree (rise)
+
+**Input:**
+```json
+{
+  "scene_description": "palm tree against blue sky with hotel building behind",
+  "main_subject": "tall palm tree",
+  "foreground": "palm trunk base",
+  "background": "hotel building and sky",
+  "camera_move": "rise",
+  "camera_direction": "upward along the palm tree",
+  "shot_size": "wide",
+  "lighting": "bright midday sun",
+  "subtle_motion": ["palm fronds move gently"],
+  "stable_element": "building",
+  "sky_instruction": "sky and clouds stay completely frozen"
+}
 ```

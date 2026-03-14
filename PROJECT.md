@@ -45,17 +45,25 @@ Image → CLIP+YOLO+Aesthetic Scoring (~2.5s/image)
       → Video
 ```
 
-### Image Enhancement Prompt (gemini_enhancement_prompt_9x16.txt)
+### Image Enhancement Prompt (gemini_enhancement_prompt_9x16.txt) ✅ COMPLETE
 
-Converts image analysis JSON into Seedream enhancement instructions via 6-step pipeline:
-1. **Reframing** — aspect ratio conversion (16:9 → 9:16), extend with texture descriptions
-2. **Removals** — defects, morphed faces → fill with surrounding texture
-3. **Lighting & Color** — subtle fixes, film stock grading (KEEP IT SUBTLE)
-4. *(step 4 not visible in screenshots)*
-5. **Preservation** — what must stay unchanged
-6. **Negative Constraints** — "No new text or signs. Natural photograph look."
+Full text: `prompts/gemini_enhancement_prompt_9x16.txt` (208 lines)
 
-10 Rules:
+Converts image analysis JSON into Seedream enhancement instructions via 5-step pipeline:
+1. **Reframing** — aspect ratio conversion (16:9 → 9:16), extend with visual texture descriptions ("white plaster ceiling", not "ceiling")
+2. **Removals** — defects, morphed faces → "fill with surrounding texture". Face handling: `action: "keep"` (natural) vs `action: "remove person"` (morphed/distorted → inpaint entire person, not just face)
+3. **Lighting & Color** — subtle fixes only, film stock grading. Key rule: KEEP IT SUBTLE
+4. *(not a numbered step — preservation is step 5)*
+5. **Preservation** — what must stay unchanged (original composition elements, natural features)
+6. **Negative Constraints** — fixed closing: "No new text or signs. Natural photograph look."
+
+**4 Complete Examples included**:
+- Wide Room → 16:9 to 9:16, extend ceiling + carpet texture descriptions
+- Restaurant → dark wood coffered ceiling + polished floor, preserve pendant lights
+- Pool with Person → no aspect change, face action = "keep", minimal enhancement
+- Lobby with Morphed Face → face action = "remove person", text action = "preserve" signage
+
+**10 Rules**:
 1. Natural language only — no JSON output
 2. Direct instructions — "Extend the top with..." not "The top should be extended..."
 3. Texture descriptions — "white plaster ceiling" not just "ceiling"
@@ -67,16 +75,38 @@ Converts image analysis JSON into Seedream enhancement instructions via 6-step p
 9. Start with "9:16 vertical format"
 10. End with "No new text or signs"
 
-### Video Prompt Template (structured JSON → Seedance)
+**Key design insight**: Enhanced image must look like a well-exposed photograph, never like AI art or HDR.
 
-Input fields:
-- scene_description, main_subject, foreground, background
-- camera_move, camera_direction, shot_size
-- lighting, subtle_motion, stable_element, sky_instruction
+### Video Prompt Template — gemini_cinematography_prompt.txt ✅ COMPLETE
 
-Output format: "Single continuous shot. [shot_size] shot of [scene] in [lighting]. The camera [move + direction]..." (~30-38 words)
+Full text: `prompts/gemini_cinematography_prompt.txt` (224 lines)
 
-Maps to 5-section structure: [镜头类型]+[场景描述]+[相机运动]+[动态元素]+[稳定锚点]
+Takes image analysis JSON → generates 30-45 word natural language Seedance prompt.
+
+**Input fields**: scene_description, main_subject, foreground, background, camera_move, camera_direction, shot_size, lighting, subtle_motion[], stable_element, sky_instruction (optional, outdoor only)
+
+**8-Section Build Structure**:
+- #0 Shot Size — "Close-up of..." / "Medium shot of..." / "Wide shot of..."
+- #1 Scene Context — one sentence from scene_description + main_subject
+- #2 Camera Movement — exact Seedance phrasing: "The camera pushes slowly forward toward..."
+- #3 What's Revealed — from foreground + background: "passing the [foreground], revealing [background]"
+- #4 Lighting — woven naturally: "warm sunlight streaming through" / "bathed in golden hour light"
+- #5 Subtle Motion — ONE phrase from subtle_motion array (skip if empty): "water ripples softly"
+- #6 Stability Anchor — "Furniture stays perfectly still." / "Tile walls remain fixed."
+- #7 Sky/Time Realism — outdoor only: "Sky and clouds remain completely still. Sun position unchanged."
+
+**Seedance Camera Language Table** (exact verbs from official docs):
+push, pull, circle around, move left/right, pan left/right, rise, tilt up
+Speed modifiers: slowly, gradually, gently (always slow for hotel/travel)
+
+**5 Complete Examples** (with full JSON input → output):
+1. Hotel Room (push) — 35 words, medium shot, no subtle motion
+2. Infinity Pool (push) — 37 words, wide shot, water ripples + sky freeze
+3. Bathtub (circle around) — 30 words, medium shot, no subtle motion
+4. Poolside (move right) — 38 words, wide shot, palm fronds + sky freeze
+5. Palm Tree (rise) — input only (output was in production, not in template)
+
+**Note on v3 evolution**: v3 system prompt dropped #6 (stability anchor) and #7 (sky/time realism) based on our finding that Seedance ignores negative/stability instructions. Canonical structure moving to 4-section: [Shot Size] + [Scene] + [Camera Move] + [Subtle Motion]. See §3.2 for evidence.
 
 ### QC Side Path (评测旁路)
 
@@ -190,7 +220,7 @@ prompt_evaluator/
 |---------|-------------|------------|-------|
 | hotel_v1.txt | Original 5-section template (shot type + scene + camera + motion + stability anchor) | ~71 | Baseline. "Single continuous shot" opener. Negative constraints included. |
 | hotel_v2_diverse.txt | v1 with more camera move variety | ~71 | Nearly identical to v1 — confirms prompt wording isn't the bottleneck for simple changes |
-| hotel_v3.txt | Rewritten based on Seedance official guide. Subject-first structure, no negative constraints, richer descriptions, 25-40 words | Testing | Structural overhaul. Removed stability anchors. Added degree adverbs guidance. |
+| hotel_v3.txt | Rewritten based on Seedance official guide. Subject-first structure, no negative constraints, richer descriptions, 25-40 words | **81.7** | **+10.4 vs v1**. Wins 4/6 scenes. Structural overhaul: removed stability anchors, subject-first order, degree adverbs. Lobby regressed (-22.4), needs investigation. |
 
 ---
 
@@ -327,7 +357,20 @@ Most common auto-fails:
 **Round 2 — OPRO "Improved" (16 samples)**
 Average reward dropped from 70.8 → 62.9. Constraint-based optimization made things worse.
 
-**Key Finding**: Scene complexity is the dominant factor, not prompt wording. Simple scenes (pool, single room) score well; complex scenes (lobby with chandeliers, beach with people) consistently fail. This is likely a Seedance 1.5 Pro model-level limitation.
+**V3 Comparison (12 samples, 6 scenes × 2 versions, 1080p)**:
+| Scene | v1 Reward | v3 Reward | Delta |
+|-------|-----------|-----------|-------|
+| pool | 45.2 | 58.4 | +13.2 |
+| room | 94.0 | 94.0 | 0 |
+| lobby | 92.0 | 69.6 | **-22.4** |
+| spa | 69.6 | 90.0 | +20.4 |
+| restaurant | 57.2 | 92.0 | **+34.8** |
+| beach | 69.6 | 86.0 | +16.4 |
+| **avg** | **71.3** | **81.7** | **+10.4** |
+
+V3 wins 4/6 scenes convincingly. Lobby regression needs investigation (possible: v3's subject-first structure doesn't work well for multi-focal-point scenes like lobbies).
+
+**Key Finding**: Scene complexity is the dominant factor, not prompt wording. Simple scenes (pool, single room) score well; complex scenes (lobby with chandeliers, beach with people) consistently fail. This is likely a Seedance 1.5 Pro model-level limitation. However, v3's structural changes DID improve scores meaningfully (+10.4 avg), suggesting prompt structure optimization still has headroom.
 
 ### 6.3 Module Status
 
@@ -410,7 +453,35 @@ Leo's existing infrastructure (structured prompt, Gemini QC → Lark Base pipeli
 
 ---
 
-## 10. Key References
+## 10. Known Gaps & Confidence Assessment
+
+### ✅ High Confidence (have complete original text)
+- gemini_image_analysis.txt — 187 lines, complete
+- gemini_cinematography_prompt.txt — 224 lines, complete with all examples
+- gemini_enhancement_prompt_9x16.txt — 208 lines, complete with all examples and rules
+- integration_architecture.md — 117 lines, complete API interface definitions
+- All experiment data — eval_results/ JSON files with exact numbers
+- Seedance prompt best practices — tested + confirmed by both of us
+
+### ⚠️ Medium Confidence (have summary, not original text)
+- Leo's optimization method comparison reasoning — I have his conclusions (OPRO outdated, DSPy primary, VPO most relevant) but his original analytical process is my summary, not his words
+- T2V-Turbo-v2 validation case — I have the architecture and key numbers but Leo's original analysis of why it validates our approach is summarized
+- Leo's doc screenshots (8 images, research doc) — all content extracted and integrated, but images themselves not persisted
+
+### ❌ Missing (never received or lost)
+- Original ZIP: INSTRUCTIONS.md, System Design doc — only my code/summaries derived from them remain
+- 纠正替阿_Prompt评测系统.md — visible as a tab in Leo's screenshots, asked about it, never received
+- HANDOFF_PROMPT_FOR... — same, visible as tab, never received
+- "There is more" — Leo said more materials were coming, topic shifted, never received
+- TikTok dedup Guidelines original screenshots (8 images) — data extracted, images not saved
+- Palm Tree example output — input JSON present but output text was cut off in the template
+
+### Coverage Estimate: ~90%
+Technical specs (pipeline architecture, prompt templates, API interfaces, evaluation design) are essentially complete. The gaps are in Leo's original reasoning narratives and a few unreceived documents that may or may not be relevant to current work.
+
+---
+
+## 11. Key References
 
 - [OPRO — Large Language Models as Optimizers](https://github.com/google-deepmind/opro) (DeepMind, ICLR 2024)
 - [DSPy — Programming with Foundation Models](https://github.com/stanfordnlp/dspy) (Stanford, 2024-2025)

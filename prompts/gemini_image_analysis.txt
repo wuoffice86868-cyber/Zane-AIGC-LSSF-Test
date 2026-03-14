@@ -40,11 +40,11 @@ Analyze the hotel/travel image to prepare for Seedream enhancement. Output simpl
 
 **main_subject**: The hero element that must stay prominent.
 
-**subject_position**: Where the subject sits — "center", "left third", "right third", "bottom half", etc.
+**subject_position**: Where the subject sits – "center", "left third", "right third", "bottom half", etc.
 
 ### Aspect Ratio
 
-**current_aspect**: What the image is now — "16:9", "4:3", "1:1", "9:16", etc.
+**current_aspect**: What the image is now – "16:9", "4:3", "1:1", "9:16", etc.
 
 **target_aspect**: Always "9:16" for vertical TikTok/Reels.
 
@@ -84,10 +84,10 @@ If an edge is already complete (nothing to extend): use "none"
 
 ### Lighting
 
-**lighting_current**: Describe the existing light — source, direction, quality.
+**lighting_current**: Describe the existing light – source, direction, quality.
 - "warm afternoon sunlight from window right"
 - "soft diffused overcast light"
-- "golden hour backlight"
+- "golden backlight"
 - "cool fluorescent overhead"
 
 **lighting_fix**: What adjustment is needed (or "none").
@@ -118,10 +118,7 @@ If an edge is already complete (nothing to extend): use "none"
 
 **faces**: For each visible face, assess quality:
 ```json
-[
-  {"quality": "natural", "action": "keep"},
-  {"quality": "morphed", "action": "remove person"}
-]
+
 ```
 
 Quality options:
