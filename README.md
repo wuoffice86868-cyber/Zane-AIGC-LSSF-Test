@@ -4,23 +4,27 @@
 
 ## 🟢 Status (live)
 
-**Last updated**: 2026-03-14 10:35 UTC  
+**Last updated**: 2026-03-15 00:50 UTC  
 **Version**: 0.2.0  
 **Tests**: 146 passing
 
-**Phase 1 Foundation — DONE** ✓
-- OPRO optimizer removed, 3-dim reward model (Foundational/Motion/Aesthetic) aligned with Seedance RM architecture
-- Auto-fail routing: each failure type penalizes only its relevant dimension
-- Pipeline DSPy-only (no OPRO fallback)
-- VideoScore2 HF Space tested — currently unstable (ZeroGPU), on hold
+**Phase 1 Foundation — DONE** ✓  
+**Phase 2 PE Layer Research — IN PROGRESS** 🔄
 
-**Next up**:
-1. Pipeline config-driven refactor (remove domain-specific hardcoding)
-2. Run v3 comparison test with new 3-dim reward model
-3. DSPy optimization loop: test critique → improve → repeat cycle
-4. Gemini QC consistency validation (same video 3×, take median)
+**Current work**: PE Layer Probe running
+- 12 prompt variants × same reference image × Gemini 2.5 Pro QC
+- Testing: structure order, length, adverbs, negatives, vocabulary
+- Results → v4 system prompt → v4 vs v3 comparison
 
-**API spend to date**: Kie.ai ~$20.31 | Gemini ~$0 (free tier)
+**Key findings so far**:
+- v3 beats v1 by +9.5 avg reward (84.8 vs 75.3)
+- OPRO made things worse (-8 pts) — confirmed wrong approach
+- Seedance has internal Qwen2.5-14B PE layer that rewrites prompts (arXiv:2506.09113)
+- VPO + PhyPrompt are correct optimization methods (not DSPy/TextGrad)
+- Negative constraints confirmed ineffective — PE strips them
+- VideoScore2 can't discriminate our quality levels (scores everything 4/4/4)
+
+**API spend to date**: Kie.ai ~$26 | Gemini ~$0 (free tier)
 
 ---
 
@@ -128,10 +132,10 @@ Phase 2 (Data-Driven Optimization) is starting — DSPy is integrated but hasn't
 
 | Phase | Description | Status |
 |-------|-------------|--------|
-| Phase 1 | Evaluation Infrastructure | ~90% ✅ (QC consistency check + VideoScore2 test remaining) |
-| Phase 2 | Data-Driven Optimization | ~15% 🔄 (DSPy integrated, first real optimization loop pending) |
-| Phase 3 | Pipeline Integration | 0% (connect into Leo's production pipeline + Lark Base) |
-| Phase 4 | Reward Model & Closed Loop | 0% (train reward model, RLHF/DPO) |
+| Phase 1 | Evaluation Infrastructure | ✅ Done — 3-dim reward, OPRO removed, Gemini QC working |
+| Phase 2 | PE Layer Research + Prompt Optimization | 🔄 In progress — PE probe running, v4 design pending |
+| Phase 3 | Pipeline Integration | 0% — connect into Leo's production pipeline + Lark Base |
+| Phase 4 | Reward Model & Closed Loop | 0% — VPO/PhyPrompt training, RLHF/DPO |
 
 See `PROJECT.md` for full phase breakdown with checkboxes.
 
