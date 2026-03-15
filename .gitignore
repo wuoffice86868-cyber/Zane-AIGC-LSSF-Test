@@ -1,7 +1,26 @@
+# Python
 *.pyc
 __pycache__/
 *.egg-info/
+*.pyo
+.pytest_cache/
+dist/
+build/
+
+# Credentials (never commit)
 .credentials
 *.pat
-__pycache__/
-*.pyc
+.kie_credentials
+.gemini_credentials.json
+.github_credentials.json
+.hf_credentials
+.videoscore2_credentials
+*.credentials.json
+
+# Logs (operational, not for git)
+logs/
+
+# Temp / OS
+.DS_Store
+*.tmp
+
